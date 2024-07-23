@@ -23,9 +23,6 @@ function runCode() {
 
     // Restore the original console.log
     console.log = originalLog;
-
-    // Clear the code editor after running the code
-    document.getElementById('code-editor').value = '';
 }
 
 // Set up initial challenge
