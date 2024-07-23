@@ -11,7 +11,7 @@ function runCode() {
     }
 }
 
-// Set up initial challenge
+
 function setupChallenge() {
     document.getElementById('challenge').textContent = "Declare variables for wood, stone, and iron and initialize them with values.";
 }
