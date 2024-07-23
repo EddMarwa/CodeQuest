@@ -4,7 +4,7 @@ function runCode() {
     const userCode = document.getElementById('code-editor').value;
     let result = '';
 
-    // Capture console.log output
+
     const originalLog = console.log;
     console.log = function(...args) {
         args.forEach(arg => {
@@ -21,7 +21,7 @@ function runCode() {
         document.getElementById('output').textContent = 'Error: ' + e.message;
     }
 
-    // Restore the original console.log
+    
     console.log = originalLog;
 }
 
