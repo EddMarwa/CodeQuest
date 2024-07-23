@@ -1,4 +1,3 @@
-// game.js
 
 function runCode() {
     const userCode = document.getElementById('code-editor').value;
