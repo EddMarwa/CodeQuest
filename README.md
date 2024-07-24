@@ -137,7 +137,6 @@ POST /api/users/login: Authenticate an existing user.
 GET /api/users/:id: Retrieve user details by ID.
 PUT /api/users/:id: Update user details.
 DELETE /api/users/:id: Delete a user account.
-
 POST /api/code/run: Execute JavaScript code.
 Request Body: { "code": "const x = 10; console.log(x);" }
 Response: { "output": "10" }
