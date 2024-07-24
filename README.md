@@ -118,17 +118,16 @@ Your input will help us enhance the application and provide a better learning ex
 
 
 
-#Best Practices
+#Best Practices<br>
 To make the most out of the Code Quest application and improve your JavaScript coding skills, follow these best practices:
-
 Avoid Syntax Mistakes:
-
 Double-check your code for any syntax errors.
 Ensure all JavaScript syntax rules are followed correctly.
 Use Semicolons:
-
 Remember to close your statements with a semicolon (;).
-Unlike some other programming languages such as Python, JavaScript requires semicolons to terminate statements.
+Unlike other programming languages such as Python, JavaScript requires semicolons to terminate statements.
+
+
 
 
 
