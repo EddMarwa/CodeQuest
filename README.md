@@ -103,15 +103,17 @@ We are working on adding more advanced debugging features and error messages in 
 
 
 #FAQ<br>
-At this time, we have not yet received feedback or frequently asked questions from users. This section will be updated in future versions of the documentation to address common questions and provide helpful answers.
+At this time, we have not yet received feedback or frequently asked questions from users.
+This section will be updated in future versions of the documentation to address common questions and provide helpful answers.
 
 
 
 #Feedback<br>
-We value your feedback and suggestions to improve the Code Quest application. If you have any questions, encounter any issues, or would like to share your thoughts, please reach out to us using the following methods:
+We value your feedback and suggestions to improve the Code Quest application. <br>
+If you have any questions, encounter any issues, or would like to share your thoughts, please reach out to us using the following methods:
 
-Email: marwaedward1@gmail.com
-Feedback Form: Submit Feedback marwaedward1@gmail.com
+Email: marwaedward1@gmail.com <br>
+Feedback Form: Submit Feedback <a href="http://edd.invodtech.com" target="_blank">here</a>
 Your input will help us enhance the application and provide a better learning experience for all users.
 
 
