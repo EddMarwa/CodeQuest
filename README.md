@@ -1,19 +1,19 @@
-#Table of Contents#
-  Introduction
-  Installation
-  Getting Started
-  User Interface Overview
-  Features and Functionality
-  Code Examples
-  Customization
-  Troubleshooting
-  FAQ
-  Feedback
-  Best Practices
-  API Documentation
-  Contribution Guide
-  Changelog
-  License
+#Table of Contents#<br>
+  Introduction<br>
+  Installation<br>
+  Getting Started<br>
+  User Interface Overview<br>
+  Features and Functionality<br>
+  Code Examples<br>
+  Customization<br>
+  Troubleshooting<br>
+  FAQ<br>
+  Feedback<br>
+  Best Practices<br>
+  API Documentation<br>
+  Contribution Guide<br>
+  Changelog<br>
+  License<br>
 
 
 #1: Documentation<br>
