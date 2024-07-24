@@ -107,6 +107,14 @@ At this time, we have not yet received feedback or frequently asked questions fr
 
 
 
+#Feedback<br>
+We value your feedback and suggestions to improve the Code Quest application. If you have any questions, encounter any issues, or would like to share your thoughts, please reach out to us using the following methods:
+
+Email: marwaedward1@gmail.com
+Feedback Form: Submit Feedback marwaedward1@gmail.com
+Your input will help us enhance the application and provide a better learning experience for all users.
+
+
 
 
 
