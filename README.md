@@ -131,10 +131,7 @@ Unlike other programming languages such as Python, JavaScript requires semicolon
 
 #API Documentation<br>
 While the current version of the Code Quest application does not include an API, I am considering adding API functionality in future updates. Below is a suggested structure for potential API endpoints and methods:
-
-Suggested API Endpoints
 User Management:
-
 POST /api/users/register: Register a new user.
 POST /api/users/login: Authenticate an existing user.
 GET /api/users/:id: Retrieve user details by ID.
