@@ -30,11 +30,12 @@ Output Section: A dedicated section where the output of the executed code is dis
 
 #Installation<br>
 System Requirements:
-The Code Quest application is a web-based application and can be accessed from any modern web browser. It is compatible with the following operating systems:
-Windows
-macOS
-Linux
-Installation Process:
+The Code Quest application is a web-based application and can be accessed from any modern web browser.<br>
+It is compatible with the following operating systems:<br>
+Windows<br>
+macOS<br>
+Linux<br>
+Installation Process:<br>
 Since Code Quest is a web application, there is no need for a traditional installation process. Users can simply visit the application website to start using it.
 Accessing the Application:
 Open your preferred web browser (e.g., Chrome, Firefox, Safari).
@@ -45,27 +46,27 @@ There are no dependencies or prerequisites that need to be installed before usin
 
 
 #Getting Started<br>
-Setting Up the Application:
-No setup is required for the Code Quest application. Users simply need to open the web application in their browser.
-Initial Configurations:
-No initial configurations are needed before using the application. Users can start coding immediately.
-Starting Your First Coding Session:
-Open the Code Quest application website in your web browser.
-Click on the code editor to begin writing your JavaScript code.
+Setting Up the Application:<br>
+No setup is required for the Code Quest application. Users simply need to open the web application in their browser.<br>
+Initial Configurations:<br>
+No initial configurations are needed before using the application. Users can start coding immediately.<br>
+Starting Your First Coding Session:<br>
+Open the Code Quest application website in your web browser.<br>
+Click on the code editor to begin writing your JavaScript code.<br>
 Once you have written your code, click the "Run Code" button to see the output in the output section.
 
 #User Interface Overview<br>
-The Code Quest application features a simple and intuitive user interface designed to help beginners focus on learning JavaScript. The main components of the interface include:
-Code Editor:
+The Code Quest application features a simple and intuitive user interface designed to help beginners focus on learning JavaScript. The main components of the interface include:<br>
+Code Editor:<br>
 A built-in code editor where users can write their JavaScript code.
 The editor provides syntax highlighting and an easy-to-use interface.
-Run Code Button:
-A button is located below the code editor.
+Run Code Button:<br>
+A button is located below the code editor.<br>
 Users can click this button to execute their code and view the output.
 Output Section:
 A section that displays the output of the executed code.
 Located below the Run Code button, providing immediate feedback.
-Footer:
+Footer:<br>
 Contains details about the creators of the application.
 Provides additional information and credits.
 Navigating the Application:
@@ -75,20 +76,20 @@ The footer is available for users who want to know more about the creators or ne
 
 #Features and Functionality<br>
 The Code Quest application offers several key features designed to help users learn and debug JavaScript code effectively. Here are the main features and how they work:
-Code Editor:
+Code Editor:<br>
 The built-in code editor allows users to write JavaScript code directly within the application.
 It provides syntax highlighting, making the code easier to read and write.
 The user-friendly interface supports easy navigation and editing of the code.
-Run Code Button:
+Run Code Button:<br>
 The "Run Code" button initiates the debugging process for the code written in the code editor.
 Users can click this button to execute their code and check for any errors.
-Debugging:
+Debugging:<br>
 When the "Run Code" button is pressed, the application starts debugging the code.
 If there are any syntax errors or issues, the debugging process will identify them, though currently, no specific error messages are displayed in the output section.
-Output Section:
-The output section displays the result of the executed code.
-If the code runs successfully, the output or result is shown in this section.
-If there are errors in the code, the output section will not display any results, indicating that the code needs to be corrected.
+Output Section:<br>
+The output section displays the result of the executed code.<br>
+If the code runs successfully, the output or result is shown in this section.<br>
+If there are errors in the code, the output section will not display any results, indicating that the code needs to be corrected.<br>
 
 
 
@@ -148,70 +149,70 @@ Unlike other programming languages such as Python, JavaScript requires semicolon
 
 
 #API Documentation<br>
-While the current version of the Code Quest application does not include an API, I am considering adding API functionality in future updates. Below is a suggested structure for potential API endpoints and methods:
-User Management:
-POST /api/users/register: Register a new user.
-POST /api/users/login: Authenticate an existing user.
-GET /api/users/:id: Retrieve user details by ID.
-PUT /api/users/:id: Update user details.
-DELETE /api/users/:id: Delete a user account.
-POST /api/code/run: Execute JavaScript code.
-Request Body: { "code": "const x = 10; console.log(x);" }
-Response: { "output": "10" }
-GET /api/code/history: Retrieve the history of executed code for a user.
+While the current version of the Code Quest application does not include an API, I am considering adding API functionality in future updates. Below is a suggested structure for potential API endpoints and methods:<br>
+User Management:<br>
+POST /api/users/register: Register a new user.<br>
+POST /api/users/login: Authenticate an existing user.<br>
+GET /api/users/:id: Retrieve user details by ID.<br>
+PUT /api/users/:id: Update user details.<br>
+DELETE /api/users/:id: Delete a user account.<br>
+POST /api/code/run: Execute JavaScript code.<br>
+Request Body: { "code": "const x = 10; console.log(x);" }<br>
+Response: { "output": "10" }<br>
+GET /api/code/history: Retrieve the history of executed code for a user.<br>
 
 
-*Feedback:
-POST /api/feedback: Submit user feedback.
-Request Body: { "userId": "123", "feedback": "Great app!" }
-GET /api/feedback: Retrieve all feedback entries.
-GET /api/feedback/:id: Retrieve specific feedback by ID.
+*Feedback:<br>
+POST /api/feedback: Submit user feedback.<br>
+Request Body: { "userId": "123", "feedback": "Great app!" }<br>
+GET /api/feedback: Retrieve all feedback entries.<br>
+GET /api/feedback/:id: Retrieve specific feedback by ID.<br>
 
-Suggested Methods
-POST: Used to create new resources, such as user accounts, code executions, and feedback entries.
-GET: Used to retrieve existing resources, such as user details, code execution history, and feedback entries.
-PUT: Used to update existing resources, such as user details.
-DELETE: Used to delete existing resources, such as user accounts.
-We plan to provide detailed API documentation when these features are implemented in future versions of the application.
+Suggested Methods<br>
+POST: Used to create new resources, such as user accounts, code executions, and feedback entries.<br>
+GET: Used to retrieve existing resources, such as user details, code execution history, and feedback entries.<br>
+PUT: Used to update existing resources, such as user details.<br>
+DELETE: Used to delete existing resources, such as user accounts.<br>
+We plan to provide detailed API documentation when these features are implemented in future versions of the application.<br>
 
 
 #Contribution Guide<br>
 We welcome contributions from the developer community to help improve the Code Quest application. Whether it's suggesting improvements, submitting bug fixes, or adding new features, your input is valuable. Here's how you can contribute:
 
-How to Contribute
-Fork the Repository:
+How to Contribute<br>
+Fork the Repository:<br>
 
-Navigate to the Code Quest GitHub repository.
-Click the "Fork" button to create your own copy of the repository.
-Clone the Repository:
+Navigate to the Code Quest GitHub repository.<br>
+Click the "Fork" button to create your own copy of the repository.<br>
+Clone the Repository:<br>
 
-Clone your forked repository to your local machine using the following command:
-bash
-Copy code
-git clone https://github.com/your-username/code-quest.git
-Create a New Branch:
+Clone your forked repository to your local machine using the following command:<br>
+bash<br>
+Copy code<br>
+git clone https://github.com/your-username/code-quest.git<br>
+Create a New Branch:<br>
 
-Create a new branch for your contribution:
-bash
-Copy code
+Create a new branch for your contribution:<br>
+bash<br>
+Copy code<br>
 git checkout -b feature/your-feature-name
 Make Changes:
 
-Make your desired changes to the codebase.
-Ensure your code follows the project's coding standards and guidelines.
-Commit Changes:
+Make your desired changes to the codebase.<br>
+Ensure your code follows the project's coding standards and guidelines.<br>
+Commit Changes:<br>
 
-Commit your changes with a descriptive commit message:
-bash
-Copy code
-git commit -m "Add feature: your-feature-name"
-Push Changes:
+Commit your changes with a descriptive commit message:<br>
+bash<br>
+Copy code<br>
+git commit -m "Add feature: your-feature-name"<br>
+Push Changes:<br>
 
-Push your changes to your forked repository:
-bash
-Copy code
-git push origin feature/your-feature-name
-Create a Pull Request:
+Push your changes to your forked repository:<br>
+bash<br>
+Copy code<br>
+git push origin feature/your-feature-name<br>
+Create a Pull Request:<br>
 
 Go to the original Code Quest repository.
 Click the "New Pull Request" button.
@@ -241,9 +242,9 @@ Detailed changelog entries will be added here as new versions are released.
 
 
 #License<br>
-The licensing model for the Code Quest application is yet to be decided. This section will be updated with the specific terms and conditions once a license has been chosen.
+The licensing model for the Code Quest application is yet to be decided. This section will be updated with the specific terms and conditions once a license has been chosen.<br>
 Future Updates
-Detailed information about the license will be provided here in future versions of the documentation.
+Detailed information about the license will be provided here in future versions of the documentation.<br>
 
 
 
