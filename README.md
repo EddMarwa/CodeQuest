@@ -215,12 +215,17 @@ Your contributions will help make Code Quest a better learning tool for JavaScri
 
 #Changelog<br>
 The Changelog will document all major updates and changes to the Code Quest application in future versions. This section will help users keep track of new features, improvements, and bug fixes as the application evolves.
-
 Version 1.0.0
 Initial release of the Code Quest application.
 Features included: code editor, run code button, and output section.
 Future Versions
 Detailed changelog entries will be added here as new versions are released.
+
+
+#License<br>
+The licensing model for the Code Quest application is yet to be decided. This section will be updated with the specific terms and conditions once a license has been chosen.
+Future Updates
+Detailed information about the license will be provided here in future versions of the documentation.
 
 
 
