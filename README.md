@@ -1,3 +1,21 @@
+#Table of Contents#
+  Introduction
+  Installation
+  Getting Started
+  User Interface Overview
+  Features and Functionality
+  Code Examples
+  Customization
+  Troubleshooting
+  FAQ
+  Feedback
+  Best Practices
+  API Documentation
+  Contribution Guide
+  Changelog
+  License
+
+
 #1: Documentation<br>
 Introduction
 Main Purpose:
