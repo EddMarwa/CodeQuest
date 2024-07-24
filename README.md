@@ -1,4 +1,4 @@
-#Documentation<br>
+#1: Documentation<br>
 Introduction
 Main Purpose:
 The Code Quest application is designed to help users learn JavaScript by writing code and immediately seeing the output. This interactive approach makes it easier for beginners to understand and practice coding concepts.
