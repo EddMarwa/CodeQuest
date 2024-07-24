@@ -55,4 +55,19 @@ Users can easily navigate the application by focusing on the main components (Co
 The footer is available for users who want to know more about the creators or need additional information.
 
 
-#
+#Features and Functionality
+The Code Quest application offers several key features designed to help users learn and debug JavaScript code effectively. Here are the main features and how they work:
+Code Editor:
+The built-in code editor allows users to write JavaScript code directly within the application.
+It provides syntax highlighting, making the code easier to read and write.
+The user-friendly interface supports easy navigation and editing of the code.
+Run Code Button:
+The "Run Code" button initiates the debugging process for the code written in the code editor.
+Users can click this button to execute their code and check for any errors.
+Debugging:
+When the "Run Code" button is pressed, the application starts debugging the code.
+If there are any syntax errors or issues, the debugging process will identify them, though currently, no specific error messages are displayed in the output section.
+Output Section:
+The output section displays the result of the executed code.
+If the code runs successfully, the output or result is shown in this section.
+If there are errors in the code, the output section will not display any results, indicating that the code needs to be corrected.
