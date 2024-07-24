@@ -148,6 +148,7 @@ POST /api/feedback: Submit user feedback.
 Request Body: { "userId": "123", "feedback": "Great app!" }
 GET /api/feedback: Retrieve all feedback entries.
 GET /api/feedback/:id: Retrieve specific feedback by ID.
+
 Suggested Methods
 POST: Used to create new resources, such as user accounts, code executions, and feedback entries.
 GET: Used to retrieve existing resources, such as user details, code execution history, and feedback entries.
