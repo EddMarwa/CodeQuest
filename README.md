@@ -79,3 +79,11 @@ If there are errors in the code, the output section will not display any results
 #Code Examples<br>
 At this time, the Code Quest application does not include predefined code examples or sample projects. However, users can start exploring and experimenting with their own JavaScript code using the built-in code editor, run code button, and output section.
 We plan to add sample code examples and use cases in future updates to help users get started quickly and see practical applications of JavaScript.
+
+
+#Customization<br>
+Currently, the Code Quest application does not offer customizable settings or configurations. Users can start writing and running their JavaScript code immediately without needing to adjust any settings.
+We plan to introduce customization options in future updates to enhance user experience and provide more flexibility in how the application is used.
+
+
+
