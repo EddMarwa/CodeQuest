@@ -129,7 +129,35 @@ Unlike other programming languages such as Python, JavaScript requires semicolon
 
 
 
+#API Documentation<br>
+While the current version of the Code Quest application does not include an API, I are considering adding API functionality in future updates. Below is a suggested structure for potential API endpoints and methods:
 
+Suggested API Endpoints
+User Management:
+
+POST /api/users/register: Register a new user.
+POST /api/users/login: Authenticate an existing user.
+GET /api/users/:id: Retrieve user details by ID.
+PUT /api/users/:id: Update user details.
+DELETE /api/users/:id: Delete a user account.
+Code Execution:
+
+POST /api/code/run: Execute JavaScript code.
+Request Body: { "code": "const x = 10; console.log(x);" }
+Response: { "output": "10" }
+GET /api/code/history: Retrieve the history of executed code for a user.
+Feedback:
+
+POST /api/feedback: Submit user feedback.
+Request Body: { "userId": "123", "feedback": "Great app!" }
+GET /api/feedback: Retrieve all feedback entries.
+GET /api/feedback/:id: Retrieve specific feedback by ID.
+Suggested Methods
+POST: Used to create new resources, such as user accounts, code executions, and feedback entries.
+GET: Used to retrieve existing resources, such as user details, code execution history, and feedback entries.
+PUT: Used to update existing resources, such as user details.
+DELETE: Used to delete existing resources, such as user accounts.
+We plan to provide detailed API documentation when these features are implemented in future versions of the application.
 
 
 
