@@ -102,6 +102,12 @@ Future Improvements:
 We are working on adding more advanced debugging features and error messages in future updates to help users identify and resolve issues more effectively.
 
 
+#FAQ<br>
+At this time, we have not yet received feedback or frequently asked questions from users. This section will be updated in future versions of the documentation to address common questions and provide helpful answers.
+
+
+
+
 
 
 
