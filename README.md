@@ -55,7 +55,7 @@ Users can easily navigate the application by focusing on the main components (Co
 The footer is available for users who want to know more about the creators or need additional information.
 
 
-#Features and Functionality
+#Features and Functionality<br>
 The Code Quest application offers several key features designed to help users learn and debug JavaScript code effectively. Here are the main features and how they work:
 Code Editor:
 The built-in code editor allows users to write JavaScript code directly within the application.
