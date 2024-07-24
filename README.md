@@ -12,8 +12,7 @@ Code Editor: A built-in code editor that allows users to write JavaScript code d
 Run Code Button: A convenient button that users can click to execute their code and see the results instantly.
 Output Section: A dedicated section where the output of the executed code is displayed, providing immediate feedback to the users.
 
-#######################################
-Installation
+#Installation<br>
 System Requirements:
 The Code Quest application is a web-based application and can be accessed from any modern web browser. It is compatible with the following operating systems:
 
@@ -30,3 +29,5 @@ Navigate to the Code Quest application website.
 Start using the application by writing JavaScript code in the code editor.
 Dependencies and Prerequisites:
 There are no dependencies or prerequisites that need to be installed before using the Code Quest application. Users can start coding immediately upon visiting the website.
+
+#
