@@ -130,7 +130,7 @@ Unlike other programming languages such as Python, JavaScript requires semicolon
 
 
 #API Documentation<br>
-While the current version of the Code Quest application does not include an API, I are considering adding API functionality in future updates. Below is a suggested structure for potential API endpoints and methods:
+While the current version of the Code Quest application does not include an API, I am considering adding API functionality in future updates. Below is a suggested structure for potential API endpoints and methods:
 
 Suggested API Endpoints
 User Management:
