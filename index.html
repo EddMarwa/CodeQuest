@@ -3,19 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code Quest</title>
+    <title>Code Quest Level 2</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div id="game-container">
-        <h1>Code Quest</h1>
+        <h1>Code Quest - Level 2</h1>
         <p id="challenge">Your challenge will appear here.</p>
         <textarea id="code-editor" rows="10" cols="50" placeholder="Write your JavaScript code here..."></textarea>
+        <div id="editor-info">
+            <span id="char-count">0 characters</span>
+        </div>
         <button id="run-button" onclick="runCode()">Run Code</button>
         <pre id="output"></pre>
+        <button id="hint-button" onclick="showHint()">Show Hint</button>
+        <p id="hint" style="display: none;">Hint: Use array methods like push and pop to manipulate arrays.</p>
         <footer>
-            <p>Quest made by <a href="https://github.com/EddMarwa" target="Stinger">EddMarwa</a></p>
+            <p>Game made by <a href="https://github.com/yourusername" target="_blank">Your Name</a></p>
         </footer>
+        <div id="score-container">
+            <p>Score: <span id="score">0</span></p>
+        </div>
+        <button id="next-level-button" style="display: none;" onclick="nextLevel()">Next Level</button>
     </div>
     <script src="game.js"></script>
 </body>
