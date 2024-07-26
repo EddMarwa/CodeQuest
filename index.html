@@ -3,29 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code Quest Level 2</title>
+    <title>Code Quest</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div id="game-container">
-        <h1>Code Quest - Level 2</h1>
-        <p id="challenge">Your challenge will appear here.</p>
-        <textarea id="code-editor" rows="10" cols="50" placeholder="Write your JavaScript code here..."></textarea>
-        <div id="editor-info">
-            <span id="char-count">0 characters</span>
+        <h1>Code Quest</h1>
+        <div id="level-container">
+            <div id="level-1" class="level">
+                <p id="challenge-1">Declare variables for wood, stone, and iron and initialize them with values.</p>
+                <textarea id="code-editor-1" rows="10" cols="50" placeholder="Write your JavaScript code here..."></textarea>
+                <div id="editor-info-1">
+                    <span id="char-count-1">0 characters</span>
+                </div>
+                <button id="run-button-1" onclick="runCode(1)">Run Code</button>
+                <pre id="output-1"></pre>
+                <button id="hint-button-1" onclick="showHint(1)">Show Hint</button>
+                <p id="hint-1" style="display: none;">Hint: Declare variables using `let` or `const` and assign values.</p>
+            </div>
+            <div id="level-2" class="level" style="display: none;">
+                <p id="challenge-2">Create an array with three elements and log it to the console.</p>
+                <textarea id="code-editor-2" rows="10" cols="50" placeholder="Write your JavaScript code here..."></textarea>
+                <div id="editor-info-2">
+                    <span id="char-count-2">0 characters</span>
+                </div>
+                <button id="run-button-2" onclick="runCode(2)">Run Code</button>
+                <pre id="output-2"></pre>
+                <button id="hint-button-2" onclick="showHint(2)">Show Hint</button>
+                <p id="hint-2" style="display: none;">Hint: Use array methods like `push` and `pop` to manipulate arrays.</p>
+            </div>
         </div>
-        <button id="run-button" onclick="runCode()">Run Code</button>
-        <pre id="output"></pre>
-        <button id="hint-button" onclick="showHint()">Show Hint</button>
-        <p id="hint" style="display: none;">Hint: Use array methods like push and pop to manipulate arrays.</p>
-        <footer>
-            <p>Quest by <a href="https://github.com/EddMarwa" target="_blank">EddMarwa</a></p>
-        </footer>
+        <button id="next-level-button" style="display: none;" onclick="nextLevel()">Next Level</button>
         <div id="score-container">
             <p>Score: <span id="score">0</span></p>
         </div>
-        <button id="next-level-button" style="display: none;" onclick="nextLevel()">Next Level</button>
+        <footer>
+            <p>Game made by <a href="https://github.com/EddMarwa" target="_blank">EddMarwa</a></p>
+        </footer>
     </div>
-    <script src="game.js"></script>  
+    <script src="game.js"></script>
 </body>
 </html>
