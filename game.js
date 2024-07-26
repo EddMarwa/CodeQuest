@@ -26,7 +26,7 @@ function runCode(level) {
         eval(userCode);
         document.getElementById(`output-${level}`).textContent = 'Output:\n' + result.trim();
         
-        // Check if the output matches the expected output for this level
+        
         if (result.trim() === expectedOutputs[level]) {
             score += 10; // Increase score on successful code execution
             document.getElementById('score').textContent = score;
