@@ -4,15 +4,15 @@ let score = 0;
 let currentLevel = 1;
 
 const expectedOutputs = {
-    1: "wood stone iron", 
-    2: "[1, 2, 3]" 
+    1: "wood stone iron", // Expected substring for level 1
+    2: "[1, 2, 3]" // Expected substring for level 2
 };
 
 function runCode(level) {
     const userCode = document.getElementById(`code-editor-${level}`).value;
     let result = '';
 
- 
+    // Capture console.log output
     const originalLog = console.log;
     console.log = function(...args) {
         args.forEach(arg => {
@@ -26,9 +26,9 @@ function runCode(level) {
         eval(userCode);
         document.getElementById(`output-${level}`).textContent = 'Output:\n' + result.trim();
         
-        
-        if (result.trim() === expectedOutputs[level]) {
-            score += 10; 
+        // Check if the output contains the expected substring for this level
+        if (result.includes(expectedOutputs[level])) {
+            score += 10; // Increase score on successful code execution
             document.getElementById('score').textContent = score;
             document.getElementById('next-level-button').style.display = 'block';
         } else {
@@ -39,11 +39,11 @@ function runCode(level) {
         document.getElementById('next-level-button').style.display = 'none';
     }
 
-   
+    // Restore the original console.log
     console.log = originalLog;
 
     document.getElementById(`code-editor-${level}`).value = '';
-    updateCharCount(level); 
+    updateCharCount(level); // Update character count
 }
 
 function setupChallenge() {
@@ -75,4 +75,4 @@ document.getElementById('code-editor-1').addEventListener('input', () => updateC
 document.getElementById('code-editor-2').addEventListener('input', () => updateCharCount(2));
 
 setupChallenge();
-document.getElementById('level-1').style.display = 'block'; 
+document.getElementById('level-1').style.display = 'block'; // Show Level 1 by default
