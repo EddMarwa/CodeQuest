@@ -4,15 +4,15 @@ let score = 0;
 let currentLevel = 1;
 
 const expectedOutputs = {
-    1: "wood stone iron", // Expected output for level 1
-    2: "[1, 2, 3]" // Expected output for level 2 (assuming the user logs an array with these values)
+    1: "wood stone iron", 
+    2: "[1, 2, 3]" 
 };
 
 function runCode(level) {
     const userCode = document.getElementById(`code-editor-${level}`).value;
     let result = '';
 
-    // Capture console.log output
+ 
     const originalLog = console.log;
     console.log = function(...args) {
         args.forEach(arg => {
@@ -28,7 +28,7 @@ function runCode(level) {
         
         
         if (result.trim() === expectedOutputs[level]) {
-            score += 10; // Increase score on successful code execution
+            score += 10; 
             document.getElementById('score').textContent = score;
             document.getElementById('next-level-button').style.display = 'block';
         } else {
@@ -39,11 +39,11 @@ function runCode(level) {
         document.getElementById('next-level-button').style.display = 'none';
     }
 
-    // Restore the original console.log
+   
     console.log = originalLog;
 
     document.getElementById(`code-editor-${level}`).value = '';
-    updateCharCount(level); // Update character count
+    updateCharCount(level); 
 }
 
 function setupChallenge() {
