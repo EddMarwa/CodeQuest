@@ -7,7 +7,7 @@ function runCode(level) {
     const userCode = document.getElementById(`code-editor-${level}`).value;
     let result = '';
 
-    // Capture console.log output
+  
     const originalLog = console.log;
     console.log = function(...args) {
         args.forEach(arg => {
@@ -20,18 +20,18 @@ function runCode(level) {
     try {
         eval(userCode);
         document.getElementById(`output-${level}`).textContent = 'Output:\n' + result;
-        score += 10; // Increase score on successful code execution
+        score += 10;
         document.getElementById('score').textContent = score;
         document.getElementById('next-level-button').style.display = 'block';
     } catch (e) {
         document.getElementById(`output-${level}`).textContent = 'Error: ' + e.message;
     }
 
-    // Restore the original console.log
+ 
     console.log = originalLog;
 
     document.getElementById(`code-editor-${level}`).value = '';
-    updateCharCount(level); // Update character count
+    updateCharCount(level); 
 }
 
 function setupChallenge() {
