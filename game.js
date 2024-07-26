@@ -3,11 +3,6 @@
 let score = 0;
 let currentLevel = 1;
 
-const expectedOutputs = {
-    1: "wood stone iron", // Expected substring for level 1
-    2: "[1, 2, 3]" // Expected substring for level 2
-};
-
 function runCode(level) {
     const userCode = document.getElementById(`code-editor-${level}`).value;
     let result = '';
@@ -26,14 +21,10 @@ function runCode(level) {
         eval(userCode);
         document.getElementById(`output-${level}`).textContent = 'Output:\n' + result.trim();
         
-        // Check if the output contains the expected substring for this level
-        if (result.includes(expectedOutputs[level])) {
-            score += 10; // Increase score on successful code execution
-            document.getElementById('score').textContent = score;
-            document.getElementById('next-level-button').style.display = 'block';
-        } else {
-            document.getElementById('next-level-button').style.display = 'none';
-        }
+        // Code ran successfully, allow moving to the next level
+        score += 10; // Increase score on successful code execution
+        document.getElementById('score').textContent = score;
+        document.getElementById('next-level-button').style.display = 'block';
     } catch (e) {
         document.getElementById(`output-${level}`).textContent = 'Error: ' + e.message;
         document.getElementById('next-level-button').style.display = 'none';
