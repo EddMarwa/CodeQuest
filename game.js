@@ -1,4 +1,4 @@
-// game.js
+
 
 let score = 0;
 let currentLevel = 1;
@@ -7,7 +7,7 @@ function runCode(level) {
     const userCode = document.getElementById(`code-editor-${level}`).value;
     let result = '';
 
-    // Capture console.log output
+  
     const originalLog = console.log;
     console.log = function(...args) {
         args.forEach(arg => {
@@ -21,8 +21,8 @@ function runCode(level) {
         eval(userCode);
         document.getElementById(`output-${level}`).textContent = 'Output:\n' + result.trim();
         
-        // Code ran successfully, allow moving to the next level
-        score += 10; // Increase score on successful code execution
+
+        score += 10; 
         document.getElementById('score').textContent = score;
         document.getElementById('next-level-button').style.display = 'block';
     } catch (e) {
@@ -30,11 +30,10 @@ function runCode(level) {
         document.getElementById('next-level-button').style.display = 'none';
     }
 
-    // Restore the original console.log
     console.log = originalLog;
 
     document.getElementById(`code-editor-${level}`).value = '';
-    updateCharCount(level); // Update character count
+    updateCharCount(level); 
 }
 
 function setupChallenge() {
@@ -66,4 +65,4 @@ document.getElementById('code-editor-1').addEventListener('input', () => updateC
 document.getElementById('code-editor-2').addEventListener('input', () => updateCharCount(2));
 
 setupChallenge();
-document.getElementById('level-1').style.display = 'block'; // Show Level 1 by default
+document.getElementById('level-1').style.display = 'block'; 
