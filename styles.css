@@ -64,55 +64,32 @@ button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-    margin-top: 15px;
+    margin: 5px;
 }
 
 button:hover {
     background-color: #45a049;
-    transform: scale(1.05);
 }
 
-pre {
-    background-color: #f1f1f1;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    padding: 10px;
-    margin-top: 15px;
-    text-align: left;
-    white-space: pre-wrap;
+button.previous-challenge-button {
+    background-color: #e7e7e7; /* Light gray background */
+    color: black; /* Black text */
 }
 
-#hint-button {
-    background-color: #FFD700;
-    color: white;
-}
-
-#hint-button:hover {
-    background-color: #FFC700;
-}
-
-footer {
-    margin-top: 20px;
-    padding: 10px 0;
-}
-
-footer a {
-    color: #000000; 
-    text-decoration: none;
-    font-weight: bold;
-}
-
-footer a:hover {
-    text-decoration: underline;
+button.previous-challenge-button:hover {
+    background-color: #d6d6d6; /* Slightly darker gray when hovered */
 }
 
 #score-container {
     margin-top: 20px;
-    font-size: 18px;
-    color: #4CAF50;
 }
 
-#next-level-button {
-    display: none;
+footer {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+footer a {
+    color: #4CAF50;
+    text-decoration: none;
 }

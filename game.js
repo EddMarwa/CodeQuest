@@ -1,5 +1,3 @@
-// game.js
-
 let score = 0;
 let currentLevel = 1;
 
@@ -40,7 +38,7 @@ function runCode(level) {
 function setupChallenge() {
     document.getElementById('challenge-1').textContent = "Declare variables for wood, stone, and iron and initialize them with values.";
     document.getElementById('challenge-2').textContent = "Create an array with three elements and log it to the console.";
-    document.getElementById('challenge-3').textContent = "Create a function that takes two numbers and returns their sum. Log the result to the console.";
+    document.getElementById('challenge-3').textContent = "Write a function that adds two numbers and log the result to the console.";
 }
 
 function showHint(level) {
@@ -60,6 +58,15 @@ function nextLevel() {
         document.getElementById('next-level-button').style.display = 'none';
     } else {
         alert('Congratulations! You have completed all levels!');
+    }
+}
+
+function previousLevel() {
+    if (currentLevel > 1) {
+        document.getElementById(`level-${currentLevel}`).style.display = 'none';
+        currentLevel--;
+        document.getElementById(`level-${currentLevel}`).style.display = 'block';
+        document.getElementById('next-level-button').style.display = 'none';
     }
 }
 
