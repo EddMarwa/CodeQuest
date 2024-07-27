@@ -46,7 +46,7 @@ textarea {
     font-size: 16px;
     box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.05);
     margin-top: 15px; /* Added margin to create distance from the main frame */
-    margin-bottom: 15px; /* Added margin to create distance from other elements */
+    margin-bottom: 15px; 
 }
 
 #editor-info {
@@ -73,7 +73,7 @@ button:hover {
 }
 
 button.previous-challenge-button {
-    background-color: #4CAF50; /* Same green background */
+    background-color: #4CAF50; 
     color: white;
 }
 
