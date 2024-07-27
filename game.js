@@ -17,12 +17,15 @@ function runCode(level) {
 
     try {
         eval(userCode);
-        document.getElementById(`output-${level}`).textContent = 'Output:\n' + result.trim();
-        
-        // Code ran successfully, allow moving to the next level
-        score += 10; // Increase score on successful code execution
-        document.getElementById('score').textContent = score;
-        document.getElementById('next-level-button').style.display = 'block';
+        if (result.trim()) {
+            document.getElementById(`output-${level}`).textContent = 'Output:\n' + result.trim();
+            score += 10; // Increase score on successful code execution
+            document.getElementById('score').textContent = score;
+            document.getElementById('next-level-button').style.display = 'block';
+        } else {
+            document.getElementById(`output-${level}`).textContent = 'No output. Please ensure your code produces an output.';
+            document.getElementById('next-level-button').style.display = 'none';
+        }
     } catch (e) {
         document.getElementById(`output-${level}`).textContent = 'Error: ' + e.message;
         document.getElementById('next-level-button').style.display = 'none';
