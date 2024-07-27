@@ -45,7 +45,7 @@ textarea {
     font-family: 'Courier New', Courier, monospace;
     font-size: 16px;
     box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.05);
-    margin-top: 15px; /* Added margin to create distance from the main frame */
+    margin-top: 15px; 
     margin-bottom: 15px; 
 }
 
