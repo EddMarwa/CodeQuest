@@ -5,7 +5,7 @@ function runCode(level) {
     const userCode = document.getElementById(`code-editor-${level}`).value;
     let result = '';
 
-    // Capture console.log output
+    
     const originalLog = console.log;
     console.log = function(...args) {
         args.forEach(arg => {
