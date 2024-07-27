@@ -78,7 +78,7 @@ button.previous-challenge-button {
 }
 
 button.previous-challenge-button:hover {
-    background-color: #45a049; /* Same hover effect */
+    background-color: #45a049; 
 }
 
 pre {
