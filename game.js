@@ -19,7 +19,7 @@ function runCode(level) {
         eval(userCode);
         if (result.trim()) {
             document.getElementById(`output-${level}`).textContent = 'Output:\n' + result.trim();
-            score += 10; // Increase score on successful code execution
+            score += 10; 
             document.getElementById('score').textContent = score;
             document.getElementById('next-level-button').style.display = 'block';
         } else {
