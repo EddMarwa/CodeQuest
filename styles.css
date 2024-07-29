@@ -45,8 +45,7 @@ textarea {
     font-family: 'Courier New', Courier, monospace;
     font-size: 16px;
     box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.05);
-    margin-top: 15px; 
-    margin-bottom: 15px; 
+    margin-top: 20px;
 }
 
 #editor-info {
@@ -64,21 +63,13 @@ button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    margin: 5px;
     transition: background-color 0.3s, transform 0.2s;
+    margin-top: 15px;
 }
 
 button:hover {
     background-color: #45a049;
-}
-
-button.previous-challenge-button {
-    background-color: #4CAF50; 
-    color: white;
-}
-
-button.previous-challenge-button:hover {
-    background-color: #45a049; 
+    transform: scale(1.05);
 }
 
 pre {
@@ -121,7 +112,14 @@ footer a:hover {
     color: #4CAF50;
 }
 
-#next-level-button {
+#next-level-button, #prev-button {
     display: none;
 }
-  
+
+#prev-button {
+    background-color: #4CAF50;
+}
+
+#prev-button:hover {
+    background-color: #45a049;
+}
