@@ -1,4 +1,3 @@
-// game.js
 
 let score = 0;
 let currentLevel = 1;
