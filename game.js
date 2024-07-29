@@ -1,4 +1,3 @@
-
 let score = 0;
 let currentLevel = 1;
 
@@ -20,7 +19,7 @@ function runCode(level) {
         eval(userCode);
         document.getElementById(`output-${level}`).textContent = 'Output:\n' + result.trim();
         
-        // Code ran successfully, allow moving to the next level
+        // Check if there is any output to allow moving to the next level
         if (result.trim()) {
             score += 10; // Increase score on successful code execution
             document.getElementById('score').textContent = score;
@@ -43,8 +42,8 @@ function runCode(level) {
 function setupChallenge() {
     document.getElementById('challenge-1').textContent = "Declare variables for wood, stone, and iron and initialize them with values.";
     document.getElementById('challenge-2').textContent = "Create an array with three elements and log it to the console.";
-    document.getElementById('challenge-3').textContent = "Write a function that returns the sum of two numbers and log the result.";
-    document.getElementById('challenge-4').textContent = "Create an object with properties for name, age, and occupation, and log the object.";
+    document.getElementById('challenge-3').textContent = "Write a function that takes two numbers and returns their sum.";
+    document.getElementById('challenge-4').textContent = "Create an object representing a car with properties for make, model, and year. Log the object to the console.";
 }
 
 function showHint(level) {
@@ -68,13 +67,11 @@ function nextLevel() {
 }
 
 function prevLevel() {
-    document.getElementById(`level-${currentLevel}`).style.display = 'none';
-    currentLevel--;
-    if (document.getElementById(`level-${currentLevel}`)) {
+    if (currentLevel > 1) {
+        document.getElementById(`level-${currentLevel}`).style.display = 'none';
+        currentLevel--;
         document.getElementById(`level-${currentLevel}`).style.display = 'block';
         document.getElementById('next-level-button').style.display = 'none';
-    } else {
-        alert('This is the first level!');
     }
 }
 

@@ -10,7 +10,7 @@
     <div id="game-container">
         <h1>Code Quest</h1>
         <div id="level-container">
-            <div id="level-1" class="level">
+            <div id="level-1" class="level active">
                 <h2>Level 1</h2>
                 <p id="challenge-1">Declare variables for wood, stone, and iron and initialize them with values.</p>
                 <textarea id="code-editor-1" rows="10" cols="50" placeholder="Write your JavaScript code here..."></textarea>
@@ -23,7 +23,7 @@
                 <button id="hint-button-1" onclick="showHint(1)">Show Hint</button>
                 <p id="hint-1" style="display: none;">Hint: Declare variables using `let` or `const` and assign values.</p>
             </div>
-            <div id="level-2" class="level" style="display: none;">
+            <div id="level-2" class="level">
                 <h2>Level 2</h2>
                 <p id="challenge-2">Create an array with three elements and log it to the console.</p>
                 <textarea id="code-editor-2" rows="10" cols="50" placeholder="Write your JavaScript code here..."></textarea>
@@ -36,9 +36,9 @@
                 <button id="hint-button-2" onclick="showHint(2)">Show Hint</button>
                 <p id="hint-2" style="display: none;">Hint: Use array methods like `push` and `pop` to manipulate arrays.</p>
             </div>
-            <div id="level-3" class="level" style="display: none;">
+            <div id="level-3" class="level">
                 <h2>Level 3</h2>
-                <p id="challenge-3">Write a function that returns the sum of two numbers and log the result.</p>
+                <p id="challenge-3">Write a function that takes two numbers and returns their sum.</p>
                 <textarea id="code-editor-3" rows="10" cols="50" placeholder="Write your JavaScript code here..."></textarea>
                 <div id="editor-info-3">
                     <span id="char-count-3">0 characters</span>
@@ -47,11 +47,11 @@
                 <button id="prev-button-3" onclick="prevLevel()">Previous Challenge</button>
                 <pre id="output-3"></pre>
                 <button id="hint-button-3" onclick="showHint(3)">Show Hint</button>
-                <p id="hint-3" style="display: none;">Hint: Use the `function` keyword to define a function.</p>
+                <p id="hint-3" style="display: none;">Hint: Define a function using the `function` keyword.</p>
             </div>
-            <div id="level-4" class="level" style="display: none;">
+            <div id="level-4" class="level">
                 <h2>Level 4</h2>
-                <p id="challenge-4">Create an object with properties for name, age, and occupation, and log the object.</p>
+                <p id="challenge-4">Create an object representing a car with properties for make, model, and year. Log the object to the console.</p>
                 <textarea id="code-editor-4" rows="10" cols="50" placeholder="Write your JavaScript code here..."></textarea>
                 <div id="editor-info-4">
                     <span id="char-count-4">0 characters</span>
@@ -60,7 +60,7 @@
                 <button id="prev-button-4" onclick="prevLevel()">Previous Challenge</button>
                 <pre id="output-4"></pre>
                 <button id="hint-button-4" onclick="showHint(4)">Show Hint</button>
-                <p id="hint-4" style="display: none;">Hint: Use curly braces `{}` to define an object.</p>
+                <p id="hint-4" style="display: none;">Hint: Use object literal notation to create the car object.</p>
             </div>
         </div>
         <button id="next-level-button" style="display: none;" onclick="nextLevel()">Next Level</button>
