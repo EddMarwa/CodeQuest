@@ -1,4 +1,4 @@
-#Table of Contents#<br>
+#Table of Contents<br>
  1. Introduction<br>
   2. Installation<br>
   3. Getting Started<br>
