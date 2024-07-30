@@ -174,7 +174,7 @@ DELETE: Used to delete existing resources, such as user accounts.<br>
 We plan to provide detailed API documentation when these features are implemented in future versions of the application.<br>
 
 
-#Contribution Guide<br>
+#12: Contribution Guide<br>
 We welcome contributions from the developer community to help improve the Code Quest application. Whether it's suggesting improvements, submitting bug fixes, or adding new features, your input is valuable. Here's how you can contribute:
 
 How to Contribute<br>
