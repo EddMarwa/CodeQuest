@@ -55,7 +55,7 @@ Open the Code Quest application website in your web browser.<br>
 Click on the code editor to begin writing your JavaScript code.<br>
 Once you have written your code, click the "Run Code" button to see the output in the output section.
 
-#4 User Interface Overview<br>
+#4: User Interface Overview<br>
 The Code Quest application features a simple and intuitive user interface designed to help beginners focus on learning JavaScript. The main components of the interface include:<br>
 Code Editor:<br>
 A built-in code editor where users can write their JavaScript code.
