@@ -1,4 +1,4 @@
-#Table of Contents#<br>
+#Table of Contents<br>
  1. Introduction<br>
   2. Installation<br>
   3. Getting Started<br>
@@ -28,7 +28,7 @@ Run Code Button: A convenient button that users can click to execute their code 
 Output Section: A dedicated section where the output of the executed code is displayed, providing immediate feedback to the users.
 
 
-#Installation<br>
+#2: Installation<br>
 System Requirements:
 The Code Quest application is a web-based application and can be accessed from any modern web browser.<br>
 It is compatible with the following operating systems:<br>
@@ -42,10 +42,10 @@ Open your preferred web browser (e.g., Chrome, Firefox, Safari).
 Navigate to the Code Quest application website.
 Start using the application by writing JavaScript code in the code editor.
 Dependencies and Prerequisites:
-There are no dependencies or prerequisites that need to be installed before using the Code Quest application. Users can start coding immediately upon visiting the website.
+No dependencies or prerequisites need to be installed before using the Code Quest application. Users can start coding immediately upon visiting the website.
 
 
-#Getting Started<br>
+#3 Getting Started<br>
 Setting Up the Application:<br>
 No setup is required for the Code Quest application. Users simply need to open the web application in their browser.<br>
 Initial Configurations:<br>
@@ -55,7 +55,7 @@ Open the Code Quest application website in your web browser.<br>
 Click on the code editor to begin writing your JavaScript code.<br>
 Once you have written your code, click the "Run Code" button to see the output in the output section.
 
-#User Interface Overview<br>
+#4: User Interface Overview<br>
 The Code Quest application features a simple and intuitive user interface designed to help beginners focus on learning JavaScript. The main components of the interface include:<br>
 Code Editor:<br>
 A built-in code editor where users can write their JavaScript code.
@@ -74,7 +74,7 @@ Users can easily navigate the application by focusing on the main components (Co
 The footer is available for users who want to know more about the creators or need additional information.
 
 
-#Features and Functionality<br>
+#5: Features and Functionality<br>
 The Code Quest application offers several key features designed to help users learn and debug JavaScript code effectively. Here are the main features and how they work:
 Code Editor:<br>
 The built-in code editor allows users to write JavaScript code directly within the application.
@@ -93,19 +93,17 @@ If there are errors in the code, the output section will not display any results
 
 
 
-
-
-#Code Examples<br>
+#6: Code Examples<br>
 At this time, the Code Quest application does not include predefined code examples or sample projects. However, users can start exploring and experimenting with their own JavaScript code using the built-in code editor, run code button, and output section.
 We plan to add sample code examples and use cases in future updates to help users get started quickly and see practical applications of JavaScript.
 
 
-#Customization<br>
-Currently, the Code Quest application does not offer customizable settings or configurations. Users can start writing and running their JavaScript code immediately without needing to adjust any settings.
+#7: Customization<br>
+Currently, the Code Quest application does not offer customizable settings or configurations. Users can start writing and running their JavaScript code immediately without adjusting any settings.
 We plan to introduce customization options in future updates to enhance user experience and provide more flexibility in how the application is used.
 
 
-#Troubleshooting<br>
+#8: Troubleshooting<br>
 Common Issues:
 Debugging Limitations:
 The current version of the Code Quest application does not provide detailed error messages or outline specific problems in the code.
@@ -121,13 +119,13 @@ Future Improvements:
 We are working on adding more advanced debugging features and error messages in future updates to help users identify and resolve issues more effectively.
 
 
-#FAQ<br>
+#9: FAQ<br>
 At this time, we have not yet received feedback or frequently asked questions from users.
 This section will be updated in future versions of the documentation to address common questions and provide helpful answers.
 
 
 
-#Feedback<br>
+#10: Feedback<br>
 We value your feedback and suggestions to improve the Code Quest application. <br>
 If you have any questions, encounter any issues, or would like to share your thoughts, please reach out to us using the following methods:
 
@@ -137,7 +135,7 @@ Your input will help us enhance the application and provide a better learning ex
 
 
 
-#Best Practices<br>
+#11: Best Practices<br>
 To make the most out of the Code Quest application and improve your JavaScript coding skills, follow these best practices:
 Avoid Syntax Mistakes:
 Double-check your code for any syntax errors.
@@ -148,25 +146,25 @@ Unlike other programming languages such as Python, JavaScript requires semicolon
 
 
 
-#API Documentation<br>
+#12: API Documentation<br>
 While the current version of the Code Quest application does not include an API, I am considering adding API functionality in future updates. Below is a suggested structure for potential API endpoints and methods:<br>
 User Management:<br>
-POST /api/users/register: Register a new user.<br>
-POST /api/users/login: Authenticate an existing user.<br>
-GET /api/users/:id: Retrieve user details by ID.<br>
+POST /API/users/register: Register a new user.<br>
+POST /API/users/login: Authenticate an existing user.<br>
+GET /API/users/:id: Retrieve user details by ID.<br>
 PUT /api/users/:id: Update user details.<br>
-DELETE /api/users/:id: Delete a user account.<br>
-POST /api/code/run: Execute JavaScript code.<br>
+DELETE /API/users/:id: Delete a user account.<br>
+POST /API/code/run: Execute JavaScript code.<br>
 Request Body: { "code": "const x = 10; console.log(x);" }<br>
 Response: { "output": "10" }<br>
-GET /api/code/history: Retrieve the history of executed code for a user.<br>
+GET /API/code/history: Retrieve the history of executed code for a user.<br>
 
 
 *Feedback:<br>
-POST /api/feedback: Submit user feedback.<br>
+POST /API/feedback: Submit user feedback.<br>
 Request Body: { "userId": "123", "feedback": "Great app!" }<br>
-GET /api/feedback: Retrieve all feedback entries.<br>
-GET /api/feedback/:id: Retrieve specific feedback by ID.<br>
+GET /API/feedback: Retrieve all feedback entries.<br>
+GET /API/feedback/:id: Retrieve specific feedback by ID.<br>
 
 Suggested Methods<br>
 POST: Used to create new resources, such as user accounts, code executions, and feedback entries.<br>
@@ -176,7 +174,7 @@ DELETE: Used to delete existing resources, such as user accounts.<br>
 We plan to provide detailed API documentation when these features are implemented in future versions of the application.<br>
 
 
-#Contribution Guide<br>
+#12: Contribution Guide<br>
 We welcome contributions from the developer community to help improve the Code Quest application. Whether it's suggesting improvements, submitting bug fixes, or adding new features, your input is valuable. Here's how you can contribute:
 
 How to Contribute<br>
@@ -232,16 +230,16 @@ User Interface Enhancements: Improving the user interface to make it more intuit
 API Development: Implementing the suggested API endpoints and methods outlined in the API Documentation section.
 Your contributions will help make Code Quest a better learning tool for JavaScript beginners. Thank you for your support!
 
-#Changelog<br>
+#13 Changelog<br>
 The Changelog will document all major updates and changes to the Code Quest application in future versions. This section will help users keep track of new features, improvements, and bug fixes as the application evolves.
 Version 1.0.0
-Initial release of the Code Quest application.
+The initial release of the Code Quest application.
 Features included: code editor, run code button, and output section.
 Future Versions
 Detailed changelog entries will be added here as new versions are released.
 
 
-#License<br>
+#14 License<br>
 The licensing model for the Code Quest application is yet to be decided. This section will be updated with the specific terms and conditions once a license has been chosen.<br>
 Future Updates
 Detailed information about the license will be provided here in future versions of the documentation.<br>
