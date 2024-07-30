@@ -149,22 +149,22 @@ Unlike other programming languages such as Python, JavaScript requires semicolon
 #12: API Documentation<br>
 While the current version of the Code Quest application does not include an API, I am considering adding API functionality in future updates. Below is a suggested structure for potential API endpoints and methods:<br>
 User Management:<br>
-POST /api/users/register: Register a new user.<br>
-POST /api/users/login: Authenticate an existing user.<br>
-GET /api/users/:id: Retrieve user details by ID.<br>
+POST /API/users/register: Register a new user.<br>
+POST /API/users/login: Authenticate an existing user.<br>
+GET /API/users/:id: Retrieve user details by ID.<br>
 PUT /api/users/:id: Update user details.<br>
-DELETE /api/users/:id: Delete a user account.<br>
-POST /api/code/run: Execute JavaScript code.<br>
+DELETE /API/users/:id: Delete a user account.<br>
+POST /API/code/run: Execute JavaScript code.<br>
 Request Body: { "code": "const x = 10; console.log(x);" }<br>
 Response: { "output": "10" }<br>
-GET /api/code/history: Retrieve the history of executed code for a user.<br>
+GET /API/code/history: Retrieve the history of executed code for a user.<br>
 
 
 *Feedback:<br>
-POST /api/feedback: Submit user feedback.<br>
+POST /API/feedback: Submit user feedback.<br>
 Request Body: { "userId": "123", "feedback": "Great app!" }<br>
-GET /api/feedback: Retrieve all feedback entries.<br>
-GET /api/feedback/:id: Retrieve specific feedback by ID.<br>
+GET /API/feedback: Retrieve all feedback entries.<br>
+GET /API/feedback/:id: Retrieve specific feedback by ID.<br>
 
 Suggested Methods<br>
 POST: Used to create new resources, such as user accounts, code executions, and feedback entries.<br>
