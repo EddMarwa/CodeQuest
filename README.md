@@ -135,7 +135,7 @@ Your input will help us enhance the application and provide a better learning ex
 
 
 
-# Best Practices<br>
+#11 Best Practices<br>
 To make the most out of the Code Quest application and improve your JavaScript coding skills, follow these best practices:
 Avoid Syntax Mistakes:
 Double-check your code for any syntax errors.
