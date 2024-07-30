@@ -45,7 +45,7 @@ Dependencies and Prerequisites:
 There are no dependencies or prerequisites that need to be installed before using the Code Quest application. Users can start coding immediately upon visiting the website.
 
 
-#Getting Started<br>
+#3 Getting Started<br>
 Setting Up the Application:<br>
 No setup is required for the Code Quest application. Users simply need to open the web application in their browser.<br>
 Initial Configurations:<br>
