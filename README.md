@@ -239,7 +239,7 @@ Future Versions
 Detailed changelog entries will be added here as new versions are released.
 
 
-#License<br>
+#14 License<br>
 The licensing model for the Code Quest application is yet to be decided. This section will be updated with the specific terms and conditions once a license has been chosen.<br>
 Future Updates
 Detailed information about the license will be provided here in future versions of the documentation.<br>
