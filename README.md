@@ -28,7 +28,7 @@ Run Code Button: A convenient button that users can click to execute their code 
 Output Section: A dedicated section where the output of the executed code is displayed, providing immediate feedback to the users.
 
 
-#Installation<br>
+#2 Installation<br>
 System Requirements:
 The Code Quest application is a web-based application and can be accessed from any modern web browser.<br>
 It is compatible with the following operating systems:<br>
