@@ -103,7 +103,7 @@ Currently, the Code Quest application does not offer customizable settings or co
 We plan to introduce customization options in future updates to enhance user experience and provide more flexibility in how the application is used.
 
 
-#Troubleshooting<br>
+#8 Troubleshooting<br>
 Common Issues:
 Debugging Limitations:
 The current version of the Code Quest application does not provide detailed error messages or outline specific problems in the code.
