@@ -42,7 +42,7 @@ Open your preferred web browser (e.g., Chrome, Firefox, Safari).
 Navigate to the Code Quest application website.
 Start using the application by writing JavaScript code in the code editor.
 Dependencies and Prerequisites:
-There are no dependencies or prerequisites that need to be installed before using the Code Quest application. Users can start coding immediately upon visiting the website.
+No dependencies or prerequisites need to be installed before using the Code Quest application. Users can start coding immediately upon visiting the website.
 
 
 #3 Getting Started<br>
