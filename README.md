@@ -230,7 +230,7 @@ User Interface Enhancements: Improving the user interface to make it more intuit
 API Development: Implementing the suggested API endpoints and methods outlined in the API Documentation section.
 Your contributions will help make Code Quest a better learning tool for JavaScript beginners. Thank you for your support!
 
-#Changelog<br>
+#13 Changelog<br>
 The Changelog will document all major updates and changes to the Code Quest application in future versions. This section will help users keep track of new features, improvements, and bug fixes as the application evolves.
 Version 1.0.0
 Initial release of the Code Quest application.
