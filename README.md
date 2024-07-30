@@ -98,7 +98,7 @@ At this time, the Code Quest application does not include predefined code exampl
 We plan to add sample code examples and use cases in future updates to help users get started quickly and see practical applications of JavaScript.
 
 
-#Customization<br>
+# Customization<br>
 Currently, the Code Quest application does not offer customizable settings or configurations. Users can start writing and running their JavaScript code immediately without needing to adjust any settings.
 We plan to introduce customization options in future updates to enhance user experience and provide more flexibility in how the application is used.
 
