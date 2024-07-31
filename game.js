@@ -32,11 +32,10 @@ function runCode(level) {
         document.getElementById('next-level-button').style.display = 'none';
     }
 
-    // Restore the original console.log
     console.log = originalLog;
 
     document.getElementById(`code-editor-${level}`).value = '';
-    updateCharCount(level); // character count
+    updateCharCount(level); 
 }
 
 function setupChallenge() {
