@@ -31,7 +31,7 @@ h2 {
 
 .level {
     display: none;
-    max-width: 800px; /* Ensure consistent width for all levels */
+    max-width: 800px; 
     margin: auto;
 }
 
