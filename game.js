@@ -36,7 +36,7 @@ function runCode(level) {
     console.log = originalLog;
 
     document.getElementById(`code-editor-${level}`).value = '';
-    updateCharCount(level); // Update character count
+    updateCharCount(level); // character count
 }
 
 function setupChallenge() {
