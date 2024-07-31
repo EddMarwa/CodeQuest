@@ -21,7 +21,7 @@ function runCode(level) {
         
         // Check if there is any output to allow moving to the next level
         if (result.trim()) {
-            score += 10; // Increase score on successful code execution
+            score += 10; 
             document.getElementById('score').textContent = score;
             document.getElementById('next-level-button').style.display = 'block';
         } else {
