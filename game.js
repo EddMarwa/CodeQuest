@@ -19,7 +19,7 @@ function runCode(level) {
         eval(userCode);
         document.getElementById(`output-${level}`).textContent = 'Output:\n' + result.trim();
         
-        // Check if there is any output to allow moving to the next level
+ 
         if (result.trim()) {
             score += 10; 
             document.getElementById('score').textContent = score;
