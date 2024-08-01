@@ -35,7 +35,6 @@ function runCode(level) {
     // Restore the original console.log
     console.log = originalLog;
 
-    document.getElementById(`code-editor-${level}`).value = '';
     updateCharCount(level); // Update character count
 }
 
