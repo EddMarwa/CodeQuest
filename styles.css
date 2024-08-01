@@ -31,8 +31,6 @@ h2 {
 
 .level {
     display: none;
-    max-width: 800px; 
-    margin: auto;
 }
 
 .level.active {
@@ -47,7 +45,6 @@ textarea {
     font-family: 'Courier New', Courier, monospace;
     font-size: 16px;
     box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.05);
-    margin-top: 20px;
 }
 
 #editor-info {
@@ -72,7 +69,7 @@ button {
 button:hover {
     background-color: #45a049;
     transform: scale(1.05);
-}  
+}
 
 pre {
     background-color: #f1f1f1;
@@ -114,14 +111,24 @@ footer a:hover {
     color: #4CAF50;
 }
 
-#next-level-button, #prev-button {
+#next-level-button {
     display: none;
 }
 
-#prev-button {
+button#prev-button-1,
+button#prev-button-2,
+button#prev-button-3,
+button#prev-button-4,
+button#prev-button-5,
+button#prev-button-6 {
     background-color: #4CAF50;
 }
 
-#prev-button:hover {
+button#prev-button-1:hover,
+button#prev-button-2:hover,
+button#prev-button-3:hover,
+button#prev-button-4:hover,
+button#prev-button-5:hover,
+button#prev-button-6:hover {
     background-color: #45a049;
 }
