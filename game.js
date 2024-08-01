@@ -1,5 +1,6 @@
 let score = 0;
 let currentLevel = 1;
+let levelCompleted = [false, false, false, false, false, false]; // Track completion status for each level
 
 function runCode(level) {
     const userCode = document.getElementById(`code-editor-${level}`).value;
@@ -21,7 +22,10 @@ function runCode(level) {
 
         // Code ran successfully, allow moving to the next level if there's output
         if (result.trim()) {
-            score += 10; // Increase score on successful code execution
+            if (!levelCompleted[level - 1]) {
+                score += 10; // Increase score on successful code execution for the first time
+                levelCompleted[level - 1] = true;
+            }
             document.getElementById('score').textContent = score;
             document.getElementById('next-level-button').style.display = 'block';
         } else {
@@ -84,4 +88,4 @@ document.getElementById('code-editor-5').addEventListener('input', () => updateC
 document.getElementById('code-editor-6').addEventListener('input', () => updateCharCount(6));
 
 setupChallenge();
-document.getElementById('level-1').style.display = 'block'; // Show Level 1 by default
+document.getElementById('level-1').style.display = 'block'; 
