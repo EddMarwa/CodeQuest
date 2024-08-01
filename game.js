@@ -77,4 +77,4 @@ function prevLevel() {
 document.addEventListener('DOMContentLoaded', () => {
     setupChallenge();
     document.getElementById(`level-${currentLevel}`).style.display = 'block';
-});
+});   

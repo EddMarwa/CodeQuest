@@ -10,7 +10,7 @@
     <div id="game-container">
         <h1>Code Quest</h1>
         <div id="level-container">
-            <div id="level-1" class="level active">
+            <div id="level-1" class="level">
                 <h2>Level 1</h2>
                 <p id="challenge-1">Declare variables for wood, stone, and iron and initialize them with values.</p>
                 <textarea id="code-editor-1" rows="10" cols="50" placeholder="Write your JavaScript code here..."></textarea>
@@ -18,12 +18,12 @@
                     <span id="char-count-1">0 characters</span>
                 </div>
                 <button id="run-button-1" onclick="runCode(1)">Run Code</button>
-                <button id="prev-button-1" onclick="prevLevel()">Previous Challenge</button>
+                <button id="prev-button-1" onclick="prevLevel()" style="display: none;">Previous Challenge</button>
                 <pre id="output-1"></pre>
                 <button id="hint-button-1" onclick="showHint(1)">Show Hint</button>
                 <p id="hint-1" style="display: none;">Hint: Declare variables using `let` or `const` and assign values.</p>
             </div>
-            <div id="level-2" class="level">
+            <div id="level-2" class="level" style="display: none;">
                 <h2>Level 2</h2>
                 <p id="challenge-2">Create an array with three elements and log it to the console.</p>
                 <textarea id="code-editor-2" rows="10" cols="50" placeholder="Write your JavaScript code here..."></textarea>
@@ -36,9 +36,9 @@
                 <button id="hint-button-2" onclick="showHint(2)">Show Hint</button>
                 <p id="hint-2" style="display: none;">Hint: Use array methods like `push` and `pop` to manipulate arrays.</p>
             </div>
-            <div id="level-3" class="level">
+            <div id="level-3" class="level" style="display: none;">
                 <h2>Level 3</h2>
-                <p id="challenge-3">Write a function that takes two numbers and returns their sum.</p>
+                <p id="challenge-3">Write a function that returns the sum of two numbers.</p>
                 <textarea id="code-editor-3" rows="10" cols="50" placeholder="Write your JavaScript code here..."></textarea>
                 <div id="editor-info-3">
                     <span id="char-count-3">0 characters</span>
@@ -47,11 +47,11 @@
                 <button id="prev-button-3" onclick="prevLevel()">Previous Challenge</button>
                 <pre id="output-3"></pre>
                 <button id="hint-button-3" onclick="showHint(3)">Show Hint</button>
-                <p id="hint-3" style="display: none;">Hint: Define a function using the `function` keyword.</p>
+                <p id="hint-3" style="display: none;">Hint: Define a function using `function` keyword.</p>
             </div>
-            <div id="level-4" class="level">
+            <div id="level-4" class="level" style="display: none;">
                 <h2>Level 4</h2>
-                <p id="challenge-4">Create an object representing a car with properties for make, model, and year. Log the object to the console.</p>
+                <p id="challenge-4">Create an object with properties name, age, and occupation.</p>
                 <textarea id="code-editor-4" rows="10" cols="50" placeholder="Write your JavaScript code here..."></textarea>
                 <div id="editor-info-4">
                     <span id="char-count-4">0 characters</span>
@@ -60,11 +60,11 @@
                 <button id="prev-button-4" onclick="prevLevel()">Previous Challenge</button>
                 <pre id="output-4"></pre>
                 <button id="hint-button-4" onclick="showHint(4)">Show Hint</button>
-                <p id="hint-4" style="display: none;">Hint: Use object literal notation to create the car object.</p>
+                <p id="hint-4" style="display: none;">Hint: Create an object using curly braces `{}`.</p>
             </div>
-            <div id="level-5" class="level">
+            <div id="level-5" class="level" style="display: none;">
                 <h2>Level 5</h2>
-                <p id="challenge-5">Write a function that takes an array of numbers and returns the largest number.</p>
+                <p id="challenge-5">Write a loop that prints numbers from 1 to 5.</p>
                 <textarea id="code-editor-5" rows="10" cols="50" placeholder="Write your JavaScript code here..."></textarea>
                 <div id="editor-info-5">
                     <span id="char-count-5">0 characters</span>
@@ -73,7 +73,20 @@
                 <button id="prev-button-5" onclick="prevLevel()">Previous Challenge</button>
                 <pre id="output-5"></pre>
                 <button id="hint-button-5" onclick="showHint(5)">Show Hint</button>
-                <p id="hint-5" style="display: none;">Hint: Use a loop or the Math.max() method to find the largest number.</p>
+                <p id="hint-5" style="display: none;">Hint: Use a `for` loop to iterate from 1 to 5.</p>
+            </div>
+            <div id="level-6" class="level" style="display: none;">
+                <h2>Level 6</h2>
+                <p id="challenge-6">Create a function that returns the square of a number.</p>
+                <textarea id="code-editor-6" rows="10" cols="50" placeholder="Write your JavaScript code here..."></textarea>
+                <div id="editor-info-6">
+                    <span id="char-count-6">0 characters</span>
+                </div>
+                <button id="run-button-6" onclick="runCode(6)">Run Code</button>
+                <button id="prev-button-6" onclick="prevLevel()">Previous Challenge</button>
+                <pre id="output-6"></pre>
+                <button id="hint-button-6" onclick="showHint(6)">Show Hint</button>
+                <p id="hint-6" style="display: none;">Hint: Use the `return` keyword in the function to return the result.</p>
             </div>
         </div>
         <button id="next-level-button" style="display: none;" onclick="nextLevel()">Next Level</button>
@@ -81,7 +94,7 @@
             <p>Score: <span id="score">0</span></p>
         </div>
         <footer>
-            <p>Quest By <a href="https://github.com/EddMarwa" target="_blank">EddMarwa</a></p>
+            <p>Quest by <a href="https://github.com/EddMarwa" target="_blank">EddMarwa</a></p>
         </footer>
     </div>
     <script src="game.js"></script>
