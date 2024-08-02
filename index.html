@@ -88,13 +88,26 @@
                 <button id="hint-button-6" onclick="showHint(6)">Show Hint</button>
                 <p id="hint-6" style="display: none;">Hint: Use the `return` statement to return a value from a function.</p>
             </div>
+            <div id="level-7" class="level">
+                <h2>Level 7</h2>
+                <p id="challenge-7">Create a function that takes a string and returns the string reversed.</p>
+                <textarea id="code-editor-7" rows="10" cols="50" placeholder="Write your JavaScript code here..."></textarea>
+                <div id="editor-info-7">
+                    <span id="char-count-7">0 characters</span>
+                </div>
+                <button id="run-button-7" onclick="runCode(7)">Run Code</button>
+                <button id="prev-button-7" onclick="prevLevel()">Previous Challenge</button>
+                <pre id="output-7"></pre>
+                <button id="hint-button-7" onclick="showHint(7)">Show Hint</button>
+                <p id="hint-7" style="display: none;">Hint: You can use string methods and a loop to reverse a string.</p>
+            </div>
         </div>
         <button id="next-level-button" style="display: none;" onclick="nextLevel()">Next Level</button>
         <div id="score-container">
             <p>Score: <span id="score">0</span></p>
         </div>
         <footer>
-            <p>Quest By<a href="https://github.com/EddMarwa" target="_blank">EddMarwa</a></p>
+            <p>Quest By <a href="https://github.com/EddMarwa" target="_blank">EddMarwa</a></p>
         </footer>
     </div>
     <script src="game.js"></script>
