@@ -42,12 +42,12 @@ button {
     font-size: 1em;
 }
 
-#run-button-1, #run-button-2, #run-button-3, #run-button-4, #run-button-5, #run-button-6, #next-level-button, #prev-button-1, #prev-button-2, #prev-button-3, #prev-button-4, #prev-button-5, #prev-button-6 {
+#run-button-1, #run-button-2, #run-button-3, #run-button-4, #run-button-5, #run-button-6, #run-button-7, #next-level-button, #prev-button-1, #prev-button-2, #prev-button-3, #prev-button-4, #prev-button-5, #prev-button-6, #prev-button-7 {
     background-color: #28a745;
     color: #fff;
 }
 
-#prev-button-1, #prev-button-2, #prev-button-3, #prev-button-4, #prev-button-5, #prev-button-6 {
+#prev-button-1, #prev-button-2, #prev-button-3, #prev-button-4, #prev-button-5, #prev-button-6, #prev-button-7 {
     margin-left: 10px;
 }
 
@@ -82,7 +82,7 @@ footer a:hover {
     text-decoration: underline;
 }
 
-#editor-info-1, #editor-info-2, #editor-info-3, #editor-info-4, #editor-info-5, #editor-info-6 {
+#editor-info-1, #editor-info-2, #editor-info-3, #editor-info-4, #editor-info-5, #editor-info-6, #editor-info-7 {
     margin-top: 5px;
     font-size: 0.9em;
     color: #666;
