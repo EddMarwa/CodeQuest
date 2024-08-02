@@ -1,6 +1,6 @@
 let score = 0;
 let currentLevel = 1;
-let levelCompleted = [false, false, false, false, false, false]; // Track completion status for each level
+let levelCompleted = [false, false, false, false, false, false, false]; // Track completion status for each level
 
 function runCode(level) {
     const userCode = document.getElementById(`code-editor-${level}`).value;
@@ -31,15 +31,13 @@ function runCode(level) {
         } else {
             document.getElementById('next-level-button').style.display = 'none';
         }
-    } catch (e) {
-        document.getElementById(`output-${level}`).textContent = 'Error: ' + e.message;
+    } catch (error) {
+        document.getElementById(`output-${level}`).textContent = 'Error: ' + error.message;
         document.getElementById('next-level-button').style.display = 'none';
     }
 
-    // Restore the original console.log
+    // Restore console.log
     console.log = originalLog;
-
-    updateCharCount(level); // Update character count
 }
 
 function setupChallenge() {
@@ -49,6 +47,7 @@ function setupChallenge() {
     document.getElementById('challenge-4').textContent = "Create an object with properties name, age, and occupation.";
     document.getElementById('challenge-5').textContent = "Write a loop that prints numbers from 1 to 5.";
     document.getElementById('challenge-6').textContent = "Create a function that returns the square of a number.";
+    document.getElementById('challenge-7').textContent = "Create a function that takes a string and returns the string reversed.";
 }
 
 function showHint(level) {
@@ -86,6 +85,7 @@ document.getElementById('code-editor-3').addEventListener('input', () => updateC
 document.getElementById('code-editor-4').addEventListener('input', () => updateCharCount(4));
 document.getElementById('code-editor-5').addEventListener('input', () => updateCharCount(5));
 document.getElementById('code-editor-6').addEventListener('input', () => updateCharCount(6));
+document.getElementById('code-editor-7').addEventListener('input', () => updateCharCount(7));
 
 setupChallenge();
 document.getElementById('level-1').style.display = 'block'; // Show Level 1 by default
