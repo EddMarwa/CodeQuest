@@ -1,134 +1,89 @@
 body {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    background-color: #f9f9f9;
-    text-align: center;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    justify-content: center;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
 }
 
 #game-container {
-    border: 3px solid #4CAF50;
-    border-radius: 15px;
+    max-width: 800px;
+    margin: 20px auto;
     padding: 20px;
-    background-color: #ffffff;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-    max-width: 800px;   
-    margin: auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-    color: #4CAF50;
-    margin-bottom: 20px;
-}
-
-h2 {
-    color: #4CAF50;
-    margin-bottom: 10px;
+    text-align: center;
+    color: #333;
 }
 
 .level {
     display: none;
 }
 
-.level.active {
-    display: block;
+#score-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#score {
+    font-size: 1.5em;
+    color: #333;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+#run-button-1, #run-button-2, #run-button-3, #run-button-4, #run-button-5, #run-button-6, #next-level-button, #prev-button-1, #prev-button-2, #prev-button-3, #prev-button-4, #prev-button-5, #prev-button-6 {
+    background-color: #28a745;
+    color: #fff;
+}
+
+#prev-button-1, #prev-button-2, #prev-button-3, #prev-button-4, #prev-button-5, #prev-button-6 {
+    margin-left: 10px;
 }
 
 textarea {
     width: 100%;
-    border: 2px solid #4CAF50;
-    border-radius: 10px;
+    font-family: monospace;
     padding: 10px;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 16px;
-    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.05);
-}
-
-#editor-info {
-    text-align: right;
-    font-size: 12px;
-    color: #666;
-    margin-top: 5px;
-}
-
-button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-    margin-top: 15px;
-}
-
-button:hover {
-    background-color: #45a049;
-    transform: scale(1.05);
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
 pre {
-    background-color: #f1f1f1;
-    border: 2px solid #ccc;
-    border-radius: 10px;
+    background: #f4f4f4;
     padding: 10px;
-    margin-top: 15px;
-    text-align: left;
-    white-space: pre-wrap;
-}
-
-#hint-button {
-    background-color: #FFD700;
-    color: white;
-}
-
-#hint-button:hover {
-    background-color: #FFC700;
+    border-radius: 5px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
 }
 
 footer {
+    text-align: center;
     margin-top: 20px;
-    padding: 10px 0;
 }
 
 footer a {
-    color: #000000; 
+    color: #007bff;
     text-decoration: none;
-    font-weight: bold;
 }
 
 footer a:hover {
     text-decoration: underline;
 }
 
-#score-container {
-    margin-top: 20px;
-    font-size: 18px;
-    color: #4CAF50;
-}
-
-#next-level-button {
-    display: none;
-}
-
-button#prev-button-1,
-button#prev-button-2,
-button#prev-button-3,
-button#prev-button-4,
-button#prev-button-5,
-button#prev-button-6 {
-    background-color: #4CAF50;
-}
-
-button#prev-button-1:hover,
-button#prev-button-2:hover,
-button#prev-button-3:hover,
-button#prev-button-4:hover,
-button#prev-button-5:hover,
-button#prev-button-6:hover {
-    background-color: #45a049;
+#editor-info-1, #editor-info-2, #editor-info-3, #editor-info-4, #editor-info-5, #editor-info-6 {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #666;
 }
