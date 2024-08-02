@@ -88,4 +88,4 @@ document.getElementById('code-editor-5').addEventListener('input', () => updateC
 document.getElementById('code-editor-6').addEventListener('input', () => updateCharCount(6));
 
 setupChallenge();
-document.getElementById('level-1').style.display = 'block'; 
+document.getElementById('level-1').style.display = 'block'; // Show Level 1 by default
