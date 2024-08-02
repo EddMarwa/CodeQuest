@@ -40,11 +40,17 @@ button {
     border: none;
     border-radius: 5px;
     font-size: 1em;
+    transition: background-color 0.3s, color 0.3s; /* Add transition for smooth hover effect */
 }
 
 #run-button-1, #run-button-2, #run-button-3, #run-button-4, #run-button-5, #run-button-6, #run-button-7, #next-level-button, #prev-button-1, #prev-button-2, #prev-button-3, #prev-button-4, #prev-button-5, #prev-button-6, #prev-button-7 {
     background-color: #28a745;
     color: #fff;
+}
+
+#run-button-1:hover, #run-button-2:hover, #run-button-3:hover, #run-button-4:hover, #run-button-5:hover, #run-button-6:hover, #run-button-7:hover, #next-level-button:hover, #prev-button-1:hover, #prev-button-2:hover, #prev-button-3:hover, #prev-button-4:hover, #prev-button-5:hover, #prev-button-6:hover, #prev-button-7:hover {
+    background-color: #218838; /* Darker shade of green on hover */
+    color: #e0e0e0; /* Slightly lighter color on hover */
 }
 
 #prev-button-1, #prev-button-2, #prev-button-3, #prev-button-4, #prev-button-5, #prev-button-6, #prev-button-7 {
