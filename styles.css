@@ -1,32 +1,22 @@
 body {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    background-color: #f9f9f9;
-    text-align: center;
-    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
     display: flex;
-    flex-direction: column;
-    min-height: 100vh;
     justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 #game-container {
-    border: 3px solid #4CAF50;
-    border-radius: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 800px;
     padding: 20px;
-    background-color: #ffffff;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-    max-width: 800px;   
-    margin: auto;
-}
-
-h1 {
-    color: #4CAF50;
-    margin-bottom: 20px;
-}
-
-h2 {
-    color: #4CAF50;
-    margin-bottom: 10px;
+    text-align: center;
 }
 
 .level {
@@ -37,81 +27,125 @@ h2 {
     display: block;
 }
 
+#run-button-1,
+#run-button-2,
+#run-button-3,
+#run-button-4,
+#run-button-5,
+#run-button-6,
+#run-button-7,
+#run-button-8,
+#prev-button-1,
+#prev-button-2,
+#prev-button-3,
+#prev-button-4,
+#prev-button-5,
+#prev-button-6,
+#prev-button-7,
+#prev-button-8 {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 4px;
+}
+
+#prev-button-1,
+#prev-button-2,
+#prev-button-3,
+#prev-button-4,
+#prev-button-5,
+#prev-button-6,
+#prev-button-7,
+#prev-button-8 {
+    background-color: #007bff;
+}
+
+#run-button-1:hover,
+#run-button-2:hover,
+#run-button-3:hover,
+#run-button-4:hover,
+#run-button-5:hover,
+#run-button-6:hover,
+#run-button-7:hover,
+#run-button-8:hover,
+#prev-button-1:hover,
+#prev-button-2:hover,
+#prev-button-3:hover,
+#prev-button-4:hover,
+#prev-button-5:hover,
+#prev-button-6:hover,
+#prev-button-7:hover,
+#prev-button-8:hover {
+    background-color: #218838;
+}
+
+#prev-button-1:hover,
+#prev-button-2:hover,
+#prev-button-3:hover,
+#prev-button-4:hover,
+#prev-button-5:hover,
+#prev-button-6:hover,
+#prev-button-7:hover,
+#prev-button-8:hover {
+    background-color: #0056b3;
+}
+
 textarea {
     width: 100%;
-    border: 2px solid #4CAF50;
-    border-radius: 10px;
     padding: 10px;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 16px;
-    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.05);
-    margin-top: 20px;
-}
-
-#editor-info {
-    text-align: right;
-    font-size: 12px;
-    color: #666;
-    margin-top: 5px;
-}
-
-button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-    margin-top: 15px;
-}
-
-button:hover {
-    background-color: #45a049;
-    transform: scale(1.05);
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
 }
 
 pre {
-    background-color: #f1f1f1;
-    border: 2px solid #ccc;
-    border-radius: 10px;
+    background-color: #f8f9fa;
     padding: 10px;
-    margin-top: 15px;
+    border-radius: 4px;
     text-align: left;
-    white-space: pre-wrap;
 }
 
-#hint-button {
-    background-color: #FFD700;
-    color: white;
+#hint-button-1,
+#hint-button-2,
+#hint-button-3,
+#hint-button-4,
+#hint-button-5,
+#hint-button-6,
+#hint-button-7,
+#hint-button-8 {
+    background-color: #ffc107;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 4px;
 }
 
-#hint-button:hover {
-    background-color: #FFC700;
+#hint-button-1:hover,
+#hint-button-2:hover,
+#hint-button-3:hover,
+#hint-button-4:hover,
+#hint-button-5:hover,
+#hint-button-6:hover,
+#hint-button-7:hover,
+#hint-button-8:hover {
+    background-color: #e0a800;
 }
 
 footer {
     margin-top: 20px;
-    padding: 10px 0;
 }
 
 footer a {
-    color: #000000; 
+    color: #007bff;
     text-decoration: none;
-    font-weight: bold;
 }
 
 footer a:hover {
     text-decoration: underline;
-}
-
-#score-container {
-    margin-top: 20px;
-    font-size: 18px;
-    color: #4CAF50;
-}
-
-#next-level-button {
-    display: none;
 }
