@@ -1,43 +1,35 @@
-/* General Body Styles */
+/* General Styles */
 body {
     font-family: 'Comic Sans MS', cursive, sans-serif;
-    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    background-color: #f9f9f9;
     text-align: center;
     padding: 20px;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     justify-content: center;
-    margin: 0;
 }
 
-/* Container Styling */
 #game-container {
     border: 3px solid #4CAF50;
     border-radius: 15px;
     padding: 20px;
     background-color: #ffffff;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-    max-width: 900px;   
+    max-width: 900px;
     margin: auto;
-    position: relative;
-    overflow: hidden;
 }
 
-/* Header Styles */
 h1 {
     color: #4CAF50;
     margin-bottom: 20px;
-    font-size: 2.5em;
 }
 
 h2 {
     color: #4CAF50;
     margin-bottom: 10px;
-    font-size: 2em;
 }
 
-/* Level Display */
 .level {
     display: none;
 }
@@ -46,24 +38,17 @@ h2 {
     display: block;
 }
 
-/* Textarea Styles */
 textarea {
-    width: calc(100% - 22px); /* Adjust width for padding and border */
+    width: calc(100% - 24px);
     border: 2px solid #4CAF50;
     border-radius: 10px;
     padding: 10px;
     font-family: 'Courier New', Courier, monospace;
     font-size: 16px;
     box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.05);
-    transition: box-shadow 0.3s ease-in-out;
+    margin-top: 10px;
 }
 
-textarea:focus {
-    outline: none;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Editor Info Styles */
 #editor-info {
     text-align: right;
     font-size: 12px;
@@ -71,7 +56,6 @@ textarea:focus {
     margin-top: 5px;
 }
 
-/* Button Styles */
 button {
     background-color: #4CAF50;
     color: white;
@@ -81,100 +65,31 @@ button {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
-    margin-top: 15px;
-    position: relative;
-    overflow: hidden;
+    margin: 10px;
 }
 
 button:hover {
     background-color: #45a049;
+    transform: scale(1.05);
 }
 
-button:active {
-    background-color: #388e3c;
+button#prev-button {
+    background-color: #4CAF50;
 }
 
-/* Hint Button Styles */
-#hint-button {
+button#prev-button:hover {
+    background-color: #45a049;
+}
+
+button#hint-button {
     background-color: #FFD700;
     color: white;
-    border: none;
 }
 
-#hint-button:hover {
+button#hint-button:hover {
     background-color: #FFC700;
 }
 
-/* Footer Styles */
-footer {
-    margin-top: 20px;
-    padding: 10px 0;
-    background-color: #f1f1f1;
-    border-top: 1px solid #ccc;
-}
-
-footer a {
-    color: #000000; 
-    text-decoration: none;
-    font-weight: bold;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-/* Score Container Styles */
-#score-container {
-    margin-top: 20px;
-    font-size: 18px;
-    color: #4CAF50;
-}
-
-/* Next Level Button Styles */
-#next-level-button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-    margin-top: 15px;
-    display: none;
-}
-
-#next-level-button:hover {
-    background-color: #45a049;
-}
-
-#next-level-button:active {
-    background-color: #388e3c;
-}
-
-/* Previous Level Button Styles */
-#previous-level-button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-    margin-top: 15px;
-    display: inline-block;
-}
-
-#previous-level-button:hover {
-    background-color: #45a049;
-}
-
-#previous-level-button:active {
-    background-color: #388e3c;
-}
-
-/* Preformatted Text Styles */
 pre {
     background-color: #f1f1f1;
     border: 2px solid #ccc;
@@ -183,4 +98,70 @@ pre {
     margin-top: 15px;
     text-align: left;
     white-space: pre-wrap;
+}
+
+footer {
+    background-color: #333;
+    color: #ffffff;
+    padding: 20px;
+    margin-top: 20px;
+    border-top: 2px solid #4CAF50;
+}
+
+.footer-content {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.footer-links {
+    margin-bottom: 15px;
+}
+
+.footer-links a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-info p {
+    margin: 5px 0;
+}
+
+.footer-info a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.footer-info a:hover {
+    text-decoration: underline;
+}
+
+#score-container {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #4CAF50;
+}
+
+#next-level-button {
+    display: none;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#next-level-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
 }
