@@ -10,22 +10,24 @@
     <div id="game-container">
         <h1>Code Quest</h1>
         <div id="level-container">
-            <div id="level-1" class="level">
+            <!-- Level 1 -->
+            <div id="level-1" class="level active">
                 <h2>Level 1</h2>
-                <p id="challenge-1">Declare variables for wood, stone, and iron and initialize them with values.</p>
+                <p id="challenge-1">Create a variable named wood.</p>
                 <textarea id="code-editor-1" rows="10" cols="50" placeholder="Write your JavaScript code here..."></textarea>
                 <div id="editor-info-1">
                     <span id="char-count-1">0 characters</span>
                 </div>
                 <button id="run-button-1" onclick="runCode(1)">Run Code</button>
-                <button id="prev-button-1" onclick="prevLevel(1)">Previous Challenge</button>
+                <button id="prev-button-1" onclick="prevLevel(1)" style="display: none;">Previous Challenge</button>
                 <pre id="output-1"></pre>
                 <button id="hint-button-1" onclick="showHint(1)">Show Hint</button>
                 <p id="hint-1" style="display: none;">Hint: Declare variables using `let` or `const` and assign values.</p>
             </div>
+            <!-- Level 2 -->
             <div id="level-2" class="level">
                 <h2>Level 2</h2>
-                <p id="challenge-2">Create an array with three elements and log it to the console.</p>
+                <p id="challenge-2">Create an array named numbers and log it to the console.</p>
                 <textarea id="code-editor-2" rows="10" cols="50" placeholder="Write your JavaScript code here..."></textarea>
                 <div id="editor-info-2">
                     <span id="char-count-2">0 characters</span>
@@ -36,9 +38,10 @@
                 <button id="hint-button-2" onclick="showHint(2)">Show Hint</button>
                 <p id="hint-2" style="display: none;">Hint: Use array methods like `push` and `pop` to manipulate arrays.</p>
             </div>
+            <!-- Level 3 -->
             <div id="level-3" class="level">
                 <h2>Level 3</h2>
-                <p id="challenge-3">Write a function that returns the square of a number.</p>
+                <p id="challenge-3">Create a function that squares a number.</p>
                 <textarea id="code-editor-3" rows="10" cols="50" placeholder="Write your JavaScript code here..."></textarea>
                 <div id="editor-info-3">
                     <span id="char-count-3">0 characters</span>
@@ -49,9 +52,10 @@
                 <button id="hint-button-3" onclick="showHint(3)">Show Hint</button>
                 <p id="hint-3" style="display: none;">Hint: Use the `return` statement to return the square of the number.</p>
             </div>
+            <!-- Level 4 -->
             <div id="level-4" class="level">
                 <h2>Level 4</h2>
-                <p id="challenge-4">Create an object with properties for name, age, and occupation. Log the object to the console.</p>
+                <p id="challenge-4">Create an object named person with properties name, age, and occupation.</p>
                 <textarea id="code-editor-4" rows="10" cols="50" placeholder="Write your JavaScript code here..."></textarea>
                 <div id="editor-info-4">
                     <span id="char-count-4">0 characters</span>
@@ -62,9 +66,10 @@
                 <button id="hint-button-4" onclick="showHint(4)">Show Hint</button>
                 <p id="hint-4" style="display: none;">Hint: Use curly braces `{}` to create an object with properties.</p>
             </div>
+            <!-- Level 5 -->
             <div id="level-5" class="level">
                 <h2>Level 5</h2>
-                <p id="challenge-5">Write a function that takes two numbers and returns their sum.</p>
+                <p id="challenge-5">Create a function that returns the sum of two numbers.</p>
                 <textarea id="code-editor-5" rows="10" cols="50" placeholder="Write your JavaScript code here..."></textarea>
                 <div id="editor-info-5">
                     <span id="char-count-5">0 characters</span>
@@ -75,9 +80,10 @@
                 <button id="hint-button-5" onclick="showHint(5)">Show Hint</button>
                 <p id="hint-5" style="display: none;">Hint: Use the `return` statement to return the sum of the numbers.</p>
             </div>
+            <!-- Level 6 -->
             <div id="level-6" class="level">
                 <h2>Level 6</h2>
-                <p id="challenge-6">Create an array of objects, each representing a person with name and age properties. Log the array to the console.</p>
+                <p id="challenge-6">Create an array of objects representing people with properties name and age, and log it to the console.</p>
                 <textarea id="code-editor-6" rows="10" cols="50" placeholder="Write your JavaScript code here..."></textarea>
                 <div id="editor-info-6">
                     <span id="char-count-6">0 characters</span>
@@ -88,9 +94,10 @@
                 <button id="hint-button-6" onclick="showHint(6)">Show Hint</button>
                 <p id="hint-6" style="display: none;">Hint: Use square brackets `[]` to create an array of objects.</p>
             </div>
+            <!-- Level 7 -->
             <div id="level-7" class="level">
                 <h2>Level 7</h2>
-                <p id="challenge-7">Write a function that takes a string and returns the string in uppercase.</p>
+                <p id="challenge-7">Create a function that converts a string to uppercase.</p>
                 <textarea id="code-editor-7" rows="10" cols="50" placeholder="Write your JavaScript code here..."></textarea>
                 <div id="editor-info-7">
                     <span id="char-count-7">0 characters</span>
@@ -101,6 +108,7 @@
                 <button id="hint-button-7" onclick="showHint(7)">Show Hint</button>
                 <p id="hint-7" style="display: none;">Hint: Use the `toUpperCase` method of the string to convert it to uppercase.</p>
             </div>
+            <!-- Level 8 -->
             <div id="level-8" class="level">
                 <h2>Level 8</h2>
                 <p id="challenge-8">Create a function that takes an array and returns the first element.</p>
