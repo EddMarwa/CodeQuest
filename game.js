@@ -1,17 +1,4 @@
-let score = 0;
-let currentLevel = 1;
-
-const challenges = {
-    1: {code: "let wood, stone, iron;", hint: "Declare variables using `let` or `const` and assign values."},
-    2: {code: "let array = [1, 2, 3]; console.log(array);", hint: "Use array methods like `push` and `pop` to manipulate arrays."},
-    3: {code: "function square(num) { return num * num; }", hint: "Use the `return` statement to return the square of the number."},
-    4: {code: "let person = { name: 'John', age: 30, occupation: 'Developer' }; console.log(person);", hint: "Use curly braces `{}` to create an object with properties."},
-    5: {code: "function sum(a, b) { return a + b; }", hint: "Use the `return` statement to return the sum of the numbers."},
-    6: {code: "let people = [{name: 'John', age: 30}, {name: 'Jane', age: 25}]; console.log(people);", hint: "Use square brackets `[]` to create an array of objects."},
-    7: {code: "function toUpperCase(str) { return str.toUpperCase(); }", hint: "Use the `toUpperCase` method of the string to convert it to uppercase."},
-    8: {code: "function firstElement(arr) { return arr[0]; }", hint: "Use array indexing to access the first element of the array."},
-};
-
+// Helper function to run user code and check output
 function runCode(level) {
     const codeEditor = document.getElementById(`code-editor-${level}`);
     const output = document.getElementById(`output-${level}`);
@@ -19,42 +6,69 @@ function runCode(level) {
 
     try {
         const result = eval(userCode);
-        if (result !== undefined) {
-            output.textContent = result;
-            document.getElementById("next-level-button").style.display = "block";
-            if (!output.getAttribute("data-logged")) {
-                score++;
-                document.getElementById("score").textContent = score;
-                output.setAttribute("data-logged", "true");
-            }
-        } else {
-            output.textContent = "No output";
-            document.getElementById("next-level-button").style.display = "none";
-        }
+        output.textContent = result !== undefined ? result : 'No output';
+        updateScore(level, true);
     } catch (error) {
-        output.textContent = `Error: ${error.message}`;
-        document.getElementById("next-level-button").style.display = "none";
+        output.textContent = error.message;
+        updateScore(level, false);
     }
+
+    document.getElementById(`prev-button-${level}`).style.display = 'inline-block';
 }
 
-function nextLevel() {
-    if (currentLevel < Object.keys(challenges).length) {
-        document.getElementById(`level-${currentLevel}`).classList.remove("active");
-        currentLevel++;
-        document.getElementById(`level-${currentLevel}`).classList.add("active");
-        document.getElementById("next-level-button").style.display = "none";
-    }
-}
-
+// Function to navigate to the previous level
 function prevLevel(level) {
-    if (level > 1) {
-        document.getElementById(`level-${level}`).classList.remove("active");
-        currentLevel--;
-        document.getElementById(`level-${currentLevel}`).classList.add("active");
-        document.getElementById("next-level-button").style.display = "none";
+    const currentLevel = document.getElementById(`level-${level}`);
+    const prevLevel = document.getElementById(`level-${level - 1}`);
+
+    if (prevLevel) {
+        currentLevel.classList.remove('active');
+        prevLevel.classList.add('active');
     }
 }
 
-function showHint(level) {
-    document.getElementById(`hint-${level}`).style.display = "block";
+// Function to navigate to the next level
+function nextLevel() {
+    const activeLevel = document.querySelector('.level.active');
+    const activeLevelId = parseInt(activeLevel.id.split('-')[1]);
+    const nextLevel = document.getElementById(`level-${activeLevelId + 1}`);
+
+    if (nextLevel) {
+        activeLevel.classList.remove('active');
+        nextLevel.classList.add('active');
+        document.getElementById('next-level-button').style.display = 'none';
+    }
 }
+
+// Function to show hints for each level
+function showHint(level) {
+    const hint = document.getElementById(`hint-${level}`);
+    hint.style.display = 'block';
+}
+
+// Function to update the score based on correct or incorrect output
+function updateScore(level, isCorrect) {
+    const scoreElement = document.getElementById('score');
+    let score = parseInt(scoreElement.textContent);
+
+    if (isCorrect) {
+        score += 10;
+    } else {
+        score -= 5;
+    }
+
+    scoreElement.textContent = score;
+
+    if (isCorrect && level < 8) {
+        document.getElementById('next-level-button').style.display = 'inline-block';
+    }
+}
+
+// Event listeners to update character count in the code editor
+document.querySelectorAll('textarea').forEach((textarea, index) => {
+    const charCount = document.getElementById(`char-count-${index + 1}`);
+
+    textarea.addEventListener('input', () => {
+        charCount.textContent = `${textarea.value.length} characters`;
+    });
+});
