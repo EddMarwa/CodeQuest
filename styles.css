@@ -42,7 +42,8 @@ body {
 #prev-button-5,
 #prev-button-6,
 #prev-button-7,
-#prev-button-8 {
+#prev-button-8,
+#next-level-button {
     background-color: #28a745;
     color: #fff;
     border: none;
@@ -78,7 +79,8 @@ body {
 #prev-button-5:hover,
 #prev-button-6:hover,
 #prev-button-7:hover,
-#prev-button-8:hover {
+#prev-button-8:hover,
+#next-level-button:hover {
     background-color: #218838;
 }
 
