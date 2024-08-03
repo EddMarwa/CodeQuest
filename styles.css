@@ -1,95 +1,117 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #f9f9f9;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
 }
 
 #game-container {
-    max-width: 800px;
-    margin: 20px auto;
+    border: 3px solid #4CAF50;
+    border-radius: 15px;
     padding: 20px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    max-width: 800px;   
+    margin: auto;
 }
 
 h1 {
-    text-align: center;
-    color: #333;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #4CAF50;
+    margin-bottom: 10px;
 }
 
 .level {
     display: none;
 }
 
-#score-container {
-    text-align: center;
-    margin-top: 20px;
-}
-
-#score {
-    font-size: 1.5em;
-    color: #333;
-}
-
-button {
-    padding: 10px 20px;
-    margin-top: 10px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    font-size: 1em;
-    transition: background-color 0.3s, color 0.3s; /* Add transition for smooth hover effect */
-}
-
-#run-button-1, #run-button-2, #run-button-3, #run-button-4, #run-button-5, #run-button-6, #run-button-7, #next-level-button, #prev-button-1, #prev-button-2, #prev-button-3, #prev-button-4, #prev-button-5, #prev-button-6, #prev-button-7, #hint-button-1, #hint-button-2, #hint-button-3, #hint-button-4, #hint-button-5, #hint-button-6, #hint-button-7 {
-    background-color: #28a745;
-    color: #fff;
-}
-
-#run-button-1:hover, #run-button-2:hover, #run-button-3:hover, #run-button-4:hover, #run-button-5:hover, #run-button-6:hover, #run-button-7:hover, #next-level-button:hover, #prev-button-1:hover, #prev-button-2:hover, #prev-button-3:hover, #prev-button-4:hover, #prev-button-5:hover, #prev-button-6:hover, #prev-button-7:hover, #hint-button-1:hover, #hint-button-2:hover, #hint-button-3:hover, #hint-button-4:hover, #hint-button-5:hover, #hint-button-6:hover, #hint-button-7:hover {
-    background-color: #218838; /* Darker shade of green on hover */
-    color: #e0e0e0; /* Slightly lighter color on hover */
-}
-
-#prev-button-1, #prev-button-2, #prev-button-3, #prev-button-4, #prev-button-5, #prev-button-6, #prev-button-7 {
-    margin-left: 10px;
+.level.active {
+    display: block;
 }
 
 textarea {
     width: 100%;
-    font-family: monospace;
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
     padding: 10px;
-    margin-top: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-pre {
-    background: #f4f4f4;
-    padding: 10px;
-    border-radius: 5px;
-    margin-top: 10px;
-    border: 1px solid #ccc;
-}
-
-footer {
-    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.05);
     margin-top: 20px;
 }
 
+#editor-info {
+    text-align: right;
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+pre {
+    background-color: #f1f1f1;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 15px;
+    text-align: left;
+    white-space: pre-wrap;
+}
+
+#hint-button {
+    background-color: #FFD700;
+    color: white;
+}
+
+#hint-button:hover {
+    background-color: #FFC700;
+}
+
+footer {
+    margin-top: 20px;
+    padding: 10px 0;
+}
+
 footer a {
-    color: #007bff;
+    color: #000000; 
     text-decoration: none;
+    font-weight: bold;
 }
 
 footer a:hover {
     text-decoration: underline;
 }
 
-#editor-info-1, #editor-info-2, #editor-info-3, #editor-info-4, #editor-info-5, #editor-info-6, #editor-info-7 {
-    margin-top: 5px;
-    font-size: 0.9em;
-    color: #666;
+#score-container {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #4CAF50;
+}
+
+#next-level-button {
+    display: none;
 }
