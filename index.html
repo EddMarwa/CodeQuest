@@ -11,116 +11,116 @@
         <h1>Code Quest</h1>
         <div id="level-container">
             <!-- Level 1 -->
-            <div id="level-1" class="level active">
+            <div id="level-1" class="level">
                 <h2>Level 1</h2>
-                <p id="challenge-1">Create a variable named wood.</p>
+                <p id="challenge-1">Declare variables for wood, stone, and iron and initialize them with values.</p>
                 <textarea id="code-editor-1" rows="10" cols="50" placeholder="Write your JavaScript code here..."></textarea>
                 <div id="editor-info-1">
                     <span id="char-count-1">0 characters</span>
                 </div>
                 <button id="run-button-1" onclick="runCode(1)">Run Code</button>
-                <button id="prev-button-1" onclick="prevLevel(1)" style="display: none;">Previous Challenge</button>
+                <button id="prev-button-1" onclick="prevLevel()">Previous Challenge</button>
                 <pre id="output-1"></pre>
                 <button id="hint-button-1" onclick="showHint(1)">Show Hint</button>
                 <p id="hint-1" style="display: none;">Hint: Declare variables using `let` or `const` and assign values.</p>
             </div>
             <!-- Level 2 -->
-            <div id="level-2" class="level">
+            <div id="level-2" class="level" style="display: none;">
                 <h2>Level 2</h2>
-                <p id="challenge-2">Create an array named numbers and log it to the console.</p>
+                <p id="challenge-2">Create an array with three elements and log it to the console.</p>
                 <textarea id="code-editor-2" rows="10" cols="50" placeholder="Write your JavaScript code here..."></textarea>
                 <div id="editor-info-2">
                     <span id="char-count-2">0 characters</span>
                 </div>
                 <button id="run-button-2" onclick="runCode(2)">Run Code</button>
-                <button id="prev-button-2" onclick="prevLevel(2)">Previous Challenge</button>
+                <button id="prev-button-2" onclick="prevLevel()">Previous Challenge</button>
                 <pre id="output-2"></pre>
                 <button id="hint-button-2" onclick="showHint(2)">Show Hint</button>
                 <p id="hint-2" style="display: none;">Hint: Use array methods like `push` and `pop` to manipulate arrays.</p>
             </div>
             <!-- Level 3 -->
-            <div id="level-3" class="level">
+            <div id="level-3" class="level" style="display: none;">
                 <h2>Level 3</h2>
-                <p id="challenge-3">Create a function that squares a number.</p>
+                <p id="challenge-3">Write a function to calculate the factorial of a number and log the result.</p>
                 <textarea id="code-editor-3" rows="10" cols="50" placeholder="Write your JavaScript code here..."></textarea>
                 <div id="editor-info-3">
                     <span id="char-count-3">0 characters</span>
                 </div>
                 <button id="run-button-3" onclick="runCode(3)">Run Code</button>
-                <button id="prev-button-3" onclick="prevLevel(3)">Previous Challenge</button>
+                <button id="prev-button-3" onclick="prevLevel()">Previous Challenge</button>
                 <pre id="output-3"></pre>
                 <button id="hint-button-3" onclick="showHint(3)">Show Hint</button>
-                <p id="hint-3" style="display: none;">Hint: Use the `return` statement to return the square of the number.</p>
+                <p id="hint-3" style="display: none;">Hint: Use recursion or a loop to calculate the factorial.</p>
             </div>
             <!-- Level 4 -->
-            <div id="level-4" class="level">
+            <div id="level-4" class="level" style="display: none;">
                 <h2>Level 4</h2>
-                <p id="challenge-4">Create an object named person with properties name, age, and occupation.</p>
+                <p id="challenge-4">Create a function that takes an array of numbers and returns the largest number.</p>
                 <textarea id="code-editor-4" rows="10" cols="50" placeholder="Write your JavaScript code here..."></textarea>
                 <div id="editor-info-4">
                     <span id="char-count-4">0 characters</span>
                 </div>
                 <button id="run-button-4" onclick="runCode(4)">Run Code</button>
-                <button id="prev-button-4" onclick="prevLevel(4)">Previous Challenge</button>
+                <button id="prev-button-4" onclick="prevLevel()">Previous Challenge</button>
                 <pre id="output-4"></pre>
                 <button id="hint-button-4" onclick="showHint(4)">Show Hint</button>
-                <p id="hint-4" style="display: none;">Hint: Use curly braces `{}` to create an object with properties.</p>
+                <p id="hint-4" style="display: none;">Hint: Use `Math.max()` or a loop to find the largest number.</p>
             </div>
             <!-- Level 5 -->
-            <div id="level-5" class="level">
+            <div id="level-5" class="level" style="display: none;">
                 <h2>Level 5</h2>
-                <p id="challenge-5">Create a function that returns the sum of two numbers.</p>
+                <p id="challenge-5">Write a function to reverse a string and log the result.</p>
                 <textarea id="code-editor-5" rows="10" cols="50" placeholder="Write your JavaScript code here..."></textarea>
                 <div id="editor-info-5">
                     <span id="char-count-5">0 characters</span>
                 </div>
                 <button id="run-button-5" onclick="runCode(5)">Run Code</button>
-                <button id="prev-button-5" onclick="prevLevel(5)">Previous Challenge</button>
+                <button id="prev-button-5" onclick="prevLevel()">Previous Challenge</button>
                 <pre id="output-5"></pre>
                 <button id="hint-button-5" onclick="showHint(5)">Show Hint</button>
-                <p id="hint-5" style="display: none;">Hint: Use the `return` statement to return the sum of the numbers.</p>
+                <p id="hint-5" style="display: none;">Hint: Use string methods like `split()`, `reverse()`, and `join()`.</p>
             </div>
             <!-- Level 6 -->
-            <div id="level-6" class="level">
+            <div id="level-6" class="level" style="display: none;">
                 <h2>Level 6</h2>
-                <p id="challenge-6">Create an array of objects representing people with properties name and age, and log it to the console.</p>
+                <p id="challenge-6">Create a function to find the sum of all even numbers in an array.</p>
                 <textarea id="code-editor-6" rows="10" cols="50" placeholder="Write your JavaScript code here..."></textarea>
                 <div id="editor-info-6">
                     <span id="char-count-6">0 characters</span>
                 </div>
                 <button id="run-button-6" onclick="runCode(6)">Run Code</button>
-                <button id="prev-button-6" onclick="prevLevel(6)">Previous Challenge</button>
+                <button id="prev-button-6" onclick="prevLevel()">Previous Challenge</button>
                 <pre id="output-6"></pre>
                 <button id="hint-button-6" onclick="showHint(6)">Show Hint</button>
-                <p id="hint-6" style="display: none;">Hint: Use square brackets `[]` to create an array of objects.</p>
+                <p id="hint-6" style="display: none;">Hint: Use `filter()` and `reduce()` methods for arrays.</p>
             </div>
             <!-- Level 7 -->
-            <div id="level-7" class="level">
+            <div id="level-7" class="level" style="display: none;">
                 <h2>Level 7</h2>
-                <p id="challenge-7">Create a function that converts a string to uppercase.</p>
+                <p id="challenge-7">Write a function to check if a string is a palindrome.</p>
                 <textarea id="code-editor-7" rows="10" cols="50" placeholder="Write your JavaScript code here..."></textarea>
                 <div id="editor-info-7">
                     <span id="char-count-7">0 characters</span>
                 </div>
                 <button id="run-button-7" onclick="runCode(7)">Run Code</button>
-                <button id="prev-button-7" onclick="prevLevel(7)">Previous Challenge</button>
+                <button id="prev-button-7" onclick="prevLevel()">Previous Challenge</button>
                 <pre id="output-7"></pre>
                 <button id="hint-button-7" onclick="showHint(7)">Show Hint</button>
-                <p id="hint-7" style="display: none;">Hint: Use the `toUpperCase` method of the string to convert it to uppercase.</p>
+                <p id="hint-7" style="display: none;">Hint: Check if the string reads the same backward as forward.</p>
             </div>
             <!-- Level 8 -->
-            <div id="level-8" class="level">
+            <div id="level-8" class="level" style="display: none;">
                 <h2>Level 8</h2>
-                <p id="challenge-8">Create a function that takes an array and returns the first element.</p>
+                <p id="challenge-8">Create a function that returns the Fibonacci sequence up to a given number.</p>
                 <textarea id="code-editor-8" rows="10" cols="50" placeholder="Write your JavaScript code here..."></textarea>
                 <div id="editor-info-8">
                     <span id="char-count-8">0 characters</span>
                 </div>
                 <button id="run-button-8" onclick="runCode(8)">Run Code</button>
-                <button id="prev-button-8" onclick="prevLevel(8)">Previous Challenge</button>
+                <button id="prev-button-8" onclick="prevLevel()">Previous Challenge</button>
                 <pre id="output-8"></pre>
                 <button id="hint-button-8" onclick="showHint(8)">Show Hint</button>
-                <p id="hint-8" style="display: none;">Hint: Use array indexing to access the first element of the array.</p>
+                <p id="hint-8" style="display: none;">Hint: Use a loop or recursion to generate the Fibonacci sequence.</p>
             </div>
         </div>
         <button id="next-level-button" style="display: none;" onclick="nextLevel()">Next Level</button>
@@ -128,9 +128,19 @@
             <p>Score: <span id="score">0</span></p>
         </div>
         <footer>
-            <p> Quest by <a href="https://github.com/EddMarwa" target="_blank">EddMarwa</a></p>
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="https://github.com/EddMarwa" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/eddmarwa" target="_blank">LinkedIn</a>
+                    <a href="https://twitter.com/EddMarwa" target="_blank">Twitter</a>
+                </div>
+                <div class="footer-info">
+                    <p>&copy; 2024 Code Quest. All rights reserved.</p>
+                    <p>Contact us at <a href="mailto:support@codequest.com">support@codequest.com</a></p>
+                </div>
+            </div>
         </footer>
     </div>
-    <script src="game.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
