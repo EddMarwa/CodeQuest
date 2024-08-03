@@ -1,91 +1,60 @@
 let score = 0;
 let currentLevel = 1;
-let levelCompleted = [false, false, false, false, false, false, false]; // Track completion status for each level
+
+const challenges = {
+    1: {code: "let wood, stone, iron;", hint: "Declare variables using `let` or `const` and assign values."},
+    2: {code: "let array = [1, 2, 3]; console.log(array);", hint: "Use array methods like `push` and `pop` to manipulate arrays."},
+    3: {code: "function square(num) { return num * num; }", hint: "Use the `return` statement to return the square of the number."},
+    4: {code: "let person = { name: 'John', age: 30, occupation: 'Developer' }; console.log(person);", hint: "Use curly braces `{}` to create an object with properties."},
+    5: {code: "function sum(a, b) { return a + b; }", hint: "Use the `return` statement to return the sum of the numbers."},
+    6: {code: "let people = [{name: 'John', age: 30}, {name: 'Jane', age: 25}]; console.log(people);", hint: "Use square brackets `[]` to create an array of objects."},
+    7: {code: "function toUpperCase(str) { return str.toUpperCase(); }", hint: "Use the `toUpperCase` method of the string to convert it to uppercase."},
+    8: {code: "function firstElement(arr) { return arr[0]; }", hint: "Use array indexing to access the first element of the array."},
+};
 
 function runCode(level) {
-    const userCode = document.getElementById(`code-editor-${level}`).value;
-    let result = '';
-
-    // Capture console.log output
-    const originalLog = console.log;
-    console.log = function(...args) {
-        args.forEach(arg => {
-            result += arg + ' ';
-        });
-        result += '\n';
-        originalLog.apply(console, args);
-    };
+    const codeEditor = document.getElementById(`code-editor-${level}`);
+    const output = document.getElementById(`output-${level}`);
+    const userCode = codeEditor.value;
 
     try {
-        eval(userCode);
-        document.getElementById(`output-${level}`).textContent = 'Output:\n' + result.trim();
-
-        // Code ran successfully, allow moving to the next level if there's output
-        if (result.trim()) {
-            if (!levelCompleted[level - 1]) {
-                score += 10; // Increase score on successful code execution for the first time
-                levelCompleted[level - 1] = true;
+        const result = eval(userCode);
+        if (result !== undefined) {
+            output.textContent = result;
+            document.getElementById("next-level-button").style.display = "block";
+            if (!output.getAttribute("data-logged")) {
+                score++;
+                document.getElementById("score").textContent = score;
+                output.setAttribute("data-logged", "true");
             }
-            document.getElementById('score').textContent = score;
-            document.getElementById('next-level-button').style.display = 'block';
         } else {
-            document.getElementById('next-level-button').style.display = 'none';
+            output.textContent = "No output";
+            document.getElementById("next-level-button").style.display = "none";
         }
     } catch (error) {
-        document.getElementById(`output-${level}`).textContent = 'Error: ' + error.message;
-        document.getElementById('next-level-button').style.display = 'none';
+        output.textContent = `Error: ${error.message}`;
+        document.getElementById("next-level-button").style.display = "none";
     }
-
-    // Restore console.log
-    console.log = originalLog;
-}
-
-function setupChallenge() {
-    document.getElementById('challenge-1').textContent = "Declare variables for wood, stone, and iron and initialize them with values.";
-    document.getElementById('challenge-2').textContent = "Create an array with three elements and log it to the console.";
-    document.getElementById('challenge-3').textContent = "Write a function that returns the sum of two numbers.";
-    document.getElementById('challenge-4').textContent = "Create an object with properties name, age, and occupation.";
-    document.getElementById('challenge-5').textContent = "Write a loop that prints numbers from 1 to 5.";
-    document.getElementById('challenge-6').textContent = "Create a function that returns the square of a number.";
-    document.getElementById('challenge-7').textContent = "Create a function that takes a string and returns the string reversed.";
-}
-
-function showHint(level) {
-    document.getElementById(`hint-${level}`).style.display = 'block';
-}
-
-function updateCharCount(level) {
-    const charCount = document.getElementById(`code-editor-${level}`).value.length;
-    document.getElementById(`char-count-${level}`).textContent = `${charCount} characters`;
 }
 
 function nextLevel() {
-    document.getElementById(`level-${currentLevel}`).style.display = 'none';
-    currentLevel++;
-    if (document.getElementById(`level-${currentLevel}`)) {
-        document.getElementById(`level-${currentLevel}`).style.display = 'block';
-        document.getElementById('next-level-button').style.display = 'none';
-    } else {
-        alert('Congratulations! You have completed all levels!');
+    if (currentLevel < Object.keys(challenges).length) {
+        document.getElementById(`level-${currentLevel}`).classList.remove("active");
+        currentLevel++;
+        document.getElementById(`level-${currentLevel}`).classList.add("active");
+        document.getElementById("next-level-button").style.display = "none";
     }
 }
 
-function prevLevel() {
-    if (currentLevel > 1) {
-        document.getElementById(`level-${currentLevel}`).style.display = 'none';
+function prevLevel(level) {
+    if (level > 1) {
+        document.getElementById(`level-${level}`).classList.remove("active");
         currentLevel--;
-        document.getElementById(`level-${currentLevel}`).style.display = 'block';
-        document.getElementById('next-level-button').style.display = 'none';
+        document.getElementById(`level-${currentLevel}`).classList.add("active");
+        document.getElementById("next-level-button").style.display = "none";
     }
 }
 
-document.getElementById('code-editor-1').addEventListener('input', () => updateCharCount(1));
-document.getElementById('code-editor-2').addEventListener('input', () => updateCharCount(2));
-document.getElementById('code-editor-3').addEventListener('input', () => updateCharCount(3));
-document.getElementById('code-editor-4').addEventListener('input', () => updateCharCount(4));
-document.getElementById('code-editor-5').addEventListener('input', () => updateCharCount(5));
-document.getElementById('code-editor-6').addEventListener('input', () => updateCharCount(6));
-document.getElementById('code-editor-7').addEventListener('input', () => updateCharCount(7));
-
-setupChallenge();
-document.getElementById('level-1').style.display = 'block'; // Show Level 1 by default
+function showHint(level) {
+    document.getElementById(`hint-${level}`).style.display = "block";
+}
