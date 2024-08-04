@@ -21,7 +21,12 @@ function runCode(level) {
 
         // Check if output is valid to proceed to the next level
         if (result !== undefined && result !== 'No output produced.') {
-            document.getElementById('next-level-button').style.display = 'block';
+            const nextLevelButton = document.getElementById('next-level-button');
+            if (level < 9) {
+                nextLevelButton.style.display = 'block';
+            } else {
+                nextLevelButton.style.display = 'none';
+            }
             // Update score if valid output
             updateScore();
         } else {
@@ -46,7 +51,7 @@ function nextLevel() {
     const currentLevel = getCurrentLevel();
     const nextLevel = currentLevel + 1;
     
-    if (nextLevel <= 8) {
+    if (nextLevel <= 9) {
         document.getElementById(`level-${currentLevel}`).classList.remove('active');
         document.getElementById(`level-${nextLevel}`).classList.add('active');
         document.getElementById('next-level-button').style.display = 'none';
@@ -79,7 +84,7 @@ function showHint(level) {
 
 // Function to get the current active level number
 function getCurrentLevel() {
-    for (let i = 1; i <= 8; i++) {
+    for (let i = 1; i <= 9; i++) {
         if (document.getElementById(`level-${i}`).classList.contains('active')) {
             return i;
         }
