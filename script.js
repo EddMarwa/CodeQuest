@@ -1,41 +1,10 @@
-let currentLevel = 1;
-let score = 0;
-
 function runCode(level) {
-    const codeEditor = document.getElementById(`code-editor-${level}`);
-    const outputElement = document.getElementById(`output-${level}`);
-    const code = codeEditor.value;
-
+    let code = document.getElementById(`code-editor-${level}`).value;
     try {
-        const result = eval(code);
-        outputElement.textContent = result !== undefined ? result : 'No output';
-        
-        if (result !== undefined) {
-            score += 1;
-            document.getElementById('score').textContent = score;
-            document.getElementById('next-level-button').style.display = 'block';
-        } else {
-            outputElement.textContent = 'No output or error in code';
-        }
-    } catch (e) {
-        outputElement.textContent = `Error: ${e.message}`;
-    }
-}
-
-function previousLevel() {
-    if (currentLevel > 1) {
-        document.getElementById(`level-${currentLevel}`).classList.remove('active');
-        currentLevel -= 1;
-        document.getElementById(`level-${currentLevel}`).classList.add('active');
-    }
-}
-
-function nextLevel() {
-    if (currentLevel < 10) {
-        document.getElementById(`level-${currentLevel}`).classList.remove('active');
-        currentLevel += 1;
-        document.getElementById(`level-${currentLevel}`).classList.add('active');
-        document.getElementById('next-level-button').style.display = 'none';
+        let output = eval(code);
+        document.getElementById(`output-${level}`).textContent = output;
+    } catch (error) {
+        document.getElementById(`output-${level}`).textContent = 'Error: ' + error.message;
     }
 }
 
@@ -43,8 +12,39 @@ function showHint(level) {
     document.getElementById(`hint-${level}`).style.display = 'block';
 }
 
-document.querySelectorAll('textarea').forEach((textarea, index) => {
-    textarea.addEventListener('input', function() {
-        document.getElementById(`char-count-${index + 1}`).textContent = `${this.value.length} characters`;
-    });
+function prevLevel() {
+    let currentLevel = document.querySelector('.level.active');
+    if (currentLevel) {
+        currentLevel.classList.remove('active');
+        let prevLevel = currentLevel.previousElementSibling;
+        if (prevLevel && prevLevel.classList.contains('level')) {
+            prevLevel.classList.add('active');
+        }
+    }
+}
+
+function nextLevel() {
+    let currentLevel = document.querySelector('.level.active');
+    if (currentLevel) {
+        currentLevel.classList.remove('active');
+        let nextLevel = currentLevel.nextElementSibling;
+        if (nextLevel && nextLevel.classList.contains('level')) {
+            nextLevel.classList.add('active');
+        }
+    }
+}
+
+// Automatically add event listeners to the next level button
+document.querySelectorAll('.button-container button').forEach(button => {
+    if (button.textContent.includes('Run Code')) {
+        button.addEventListener('click', () => {
+            let level = button.id.split('-')[2];
+            runCode(level);
+        });
+    } else if (button.textContent.includes('Show Hint')) {
+        button.addEventListener('click', () => {
+            let level = button.id.split('-')[2];
+            showHint(level);
+        });
+    }
 });
