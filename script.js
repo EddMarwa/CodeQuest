@@ -3,30 +3,32 @@ function runCode(level) {
     const codeEditor = document.getElementById(`code-editor-${level}`);
     const output = document.getElementById(`output-${level}`);
     const code = codeEditor.value;
-    
+
+    // Clear previous output
+    output.textContent = '';
+
+    // Capture console output
+    const originalConsoleLog = console.log;
+    const consoleOutput = [];
+    console.log = function(...args) {
+        consoleOutput.push(args.join(' '));
+    };
+
     try {
-        // Clear previous output
-        output.textContent = '';
-        
         // Create a new function to execute the user code safely
         const userFunction = new Function(code);
-        const result = userFunction();
-        
-        // Check if there is any result
-        if (result !== undefined) {
-            output.textContent = result;
+        userFunction(); // Execute user code
+
+        // Retrieve captured output
+        if (consoleOutput.length > 0) {
+            output.textContent = consoleOutput.join('\n');
         } else {
             output.textContent = 'No output produced.';
         }
 
         // Check if output is valid to proceed to the next level
-        if (result !== undefined && result !== 'No output produced.') {
-            const nextLevelButton = document.getElementById('next-level-button');
-            if (level < 9) {
-                nextLevelButton.style.display = 'block';
-            } else {
-                nextLevelButton.style.display = 'none';
-            }
+        if (consoleOutput.length > 0) {
+            document.getElementById('next-level-button').style.display = 'block';
             // Update score if valid output
             updateScore();
         } else {
@@ -35,6 +37,9 @@ function runCode(level) {
 
     } catch (e) {
         output.textContent = `Error: ${e.message}`;
+    } finally {
+        // Restore original console.log
+        console.log = originalConsoleLog;
     }
 }
 
