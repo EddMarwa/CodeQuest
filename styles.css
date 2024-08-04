@@ -75,6 +75,10 @@ textarea {
     background-color: #e68900;
 }
 
+.output-container {
+    margin-top: 10px;
+}
+
 pre {
     background-color: #e9f5e9;
     border: 1px solid #d0f0d0;
