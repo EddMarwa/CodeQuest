@@ -3,13 +3,20 @@ function runCode(level) {
     try {
         let output = eval(code);
         document.getElementById(`output-${level}`).textContent = output;
+        // Update hint visibility
+        document.getElementById(`hint-${level}`).style.display = 'none';
     } catch (error) {
         document.getElementById(`output-${level}`).textContent = 'Error: ' + error.message;
     }
 }
 
 function showHint(level) {
-    document.getElementById(`hint-${level}`).style.display = 'block';
+    let hintElement = document.getElementById(`hint-${level}`);
+    if (hintElement.style.display === 'none' || hintElement.style.display === '') {
+        hintElement.style.display = 'block';
+    } else {
+        hintElement.style.display = 'none';
+    }
 }
 
 function prevLevel() {
