@@ -144,12 +144,34 @@
                 <button id="hint-button-9" class="hint-button" onclick="showHint(9)">Show Hint</button>
                 <p id="hint-9" style="display: none;">Hint: Use the `sort` method or implement a sorting algorithm.</p>
             </div>
+
+            <!-- Level 10 -->
+            <div id="level-10" class="level">
+                <h2>Level 10</h2>
+                <p id="challenge-10">Write a function that generates a random number between 1 and 100.</p>
+                <textarea id="code-editor-10" rows="10" cols="50" placeholder="Write your JavaScript code here..."></textarea>
+                <div id="editor-info-10">
+                    <span id="char-count-10">0 characters</span>
+                </div>
+                <button id="run-button-10" class="run-button" onclick="runCode(10)">Run Code</button>
+                <button id="prev-button-10" class="prev-button" onclick="previousLevel()">Previous Challenge</button>
+                <pre id="output-10"></pre>
+                <button id="hint-button-10" class="hint-button" onclick="showHint(10)">Show Hint</button>
+                <p id="hint-10" style="display: none;">Hint: Use `Math.random` and `Math.floor` methods.</p>
+            </div>
         </div>
         <button id="next-level-button" class="next-level-button" onclick="nextLevel()">Next Level</button>
         <div id="score-container">Score: <span id="score">0</span></div>
     </div>
     <footer>
-        <p>Quest by <a href="https://github.com/EddMarwa" target="_blank">EddMarwa</a></p>
+        <div class="footer-content">
+            <p>Quest by <a href="https://github.com/EddMarwa" target="_blank">EddMarwa</a></p>
+            <div class="social-links">
+                <a href="https://twitter.com/EddMarwa" target="_blank">Twitter</a>
+                <a href="https://linkedin.com/in/EddMarwa" target="_blank">LinkedIn</a>
+                <a href="https://instagram.com/EddMarwa" target="_blank">Instagram</a>
+            </div>
+        </div>
     </footer>
     <script src="script.js"></script>
 </body>
