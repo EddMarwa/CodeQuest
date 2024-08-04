@@ -1,78 +1,93 @@
-// Script for handling code editor and outputs
+// Function to run code and display output
+function runCode(level) {
+    const codeEditor = document.getElementById(`code-editor-${level}`);
+    const output = document.getElementById(`output-${level}`);
+    const code = codeEditor.value;
+    
+    try {
+        // Clear previous output
+        output.textContent = '';
+        
+        // Create a new function to execute the user code safely
+        const userFunction = new Function(code);
+        const result = userFunction();
+        
+        // Check if there is any result
+        if (result !== undefined) {
+            output.textContent = result;
+        } else {
+            output.textContent = 'No output produced.';
+        }
 
-// Store level data
-const levels = {
-    1: { code: "", hint: "Hint: Declare variables using `let` or `const` and assign values." },
-    2: { code: "", hint: "Hint: Use array methods like `push` and `pop` to manipulate arrays." },
-    3: { code: "", hint: "Hint: Use the `+` operator to add two numbers." },
-    4: { code: "", hint: "Hint: Use a `for` loop to iterate from 1 to 5." },
-    5: { code: "", hint: "Hint: Use `Math.max()` to find the largest number." },
-    6: { code: "", hint: "Hint: Use curly braces `{}` to create an object." },
-    7: { code: "", hint: "Hint: Use a loop or recursion to calculate factorial." },
-    8: { code: "", hint: "Hint: Use the `split()`, `reverse()`, and `join()` methods." },
-    9: { code: "", hint: "Hint: Use `localStorage` to save the to-do list items." }
-};
+        // Check if output is valid to proceed to the next level
+        if (result !== undefined && result !== 'No output produced.') {
+            document.getElementById('next-level-button').style.display = 'block';
+            // Update score if valid output
+            updateScore();
+        } else {
+            document.getElementById('next-level-button').style.display = 'none';
+        }
 
-// Update character count in editor
-function updateCharCount(level) {
-    const editor = document.getElementById(`code-editor-${level}`);
-    const charCount = document.getElementById(`char-count-${level}`);
-    charCount.textContent = `${editor.value.length} characters`;
+    } catch (e) {
+        output.textContent = `Error: ${e.message}`;
+    }
 }
 
-// Handle showing hints
+// Function to update the score
+function updateScore() {
+    const scoreElement = document.getElementById('score');
+    let score = parseInt(scoreElement.textContent, 10);
+    score++;
+    scoreElement.textContent = score;
+}
+
+// Function to move to the next level
+function nextLevel() {
+    const currentLevel = getCurrentLevel();
+    const nextLevel = currentLevel + 1;
+    
+    if (nextLevel <= 8) {
+        document.getElementById(`level-${currentLevel}`).classList.remove('active');
+        document.getElementById(`level-${nextLevel}`).classList.add('active');
+        document.getElementById('next-level-button').style.display = 'none';
+        // Hide hint for the current level
+        document.getElementById(`hint-${currentLevel}`).style.display = 'none';
+        // Clear editor
+        document.getElementById(`code-editor-${currentLevel}`).value = '';
+    }
+}
+
+// Function to go back to the previous level
+function prevLevel() {
+    const currentLevel = getCurrentLevel();
+    const prevLevel = currentLevel - 1;
+
+    if (prevLevel >= 1) {
+        document.getElementById(`level-${currentLevel}`).classList.remove('active');
+        document.getElementById(`level-${prevLevel}`).classList.add('active');
+        document.getElementById('next-level-button').style.display = 'none';
+        // Hide hint for the current level
+        document.getElementById(`hint-${currentLevel}`).style.display = 'none';
+    }
+}
+
+// Function to show hint for the current level
 function showHint(level) {
     const hint = document.getElementById(`hint-${level}`);
-    hint.style.display = hint.style.display === "none" ? "block" : "none";
+    hint.style.display = hint.style.display === 'none' ? 'block' : 'none';
 }
 
-// Execute code and handle output
-function runCode(level) {
-    const code = document.getElementById(`code-editor-${level}`).value;
-    const output = document.getElementById(`output-${level}`);
-    let result = "";
-
-    try {
-        // Evaluate the code
-        result = eval(code);
-    } catch (e) {
-        result = `Error: ${e.message}`;
+// Function to get the current active level number
+function getCurrentLevel() {
+    for (let i = 1; i <= 8; i++) {
+        if (document.getElementById(`level-${i}`).classList.contains('active')) {
+            return i;
+        }
     }
-
-    output.textContent = result;
-
-    // Check for output and update counter
-    if (result) {
-        const levelCounter = document.getElementById(`score-${level}`);
-        levelCounter.textContent = parseInt(levelCounter.textContent) + 1;
-    } else {
-        alert("No output generated. Please fix your code.");
-    }
+    return 1;
 }
 
-// Handle previous level button
-function prevLevel() {
-    const currentLevel = document.querySelector(".level.active");
-    const prevLevelId = parseInt(currentLevel.id.split('-')[1]) - 1;
-    
-    if (prevLevelId >= 1) {
-        currentLevel.classList.remove("active");
-        document.getElementById(`level-${prevLevelId}`).classList.add("active");
-    }
-}
-
-// Handle next level button
-function nextLevel() {
-    const currentLevel = document.querySelector(".level.active");
-    const nextLevelId = parseInt(currentLevel.id.split('-')[1]) + 1;
-    
-    if (nextLevelId <= 9) {
-        currentLevel.classList.remove("active");
-        document.getElementById(`level-${nextLevelId}`).classList.add("active");
-    }
-}
-
-// Add event listeners for editors
-for (let i = 1; i <= 9; i++) {
-    document.getElementById(`code-editor-${i}`).addEventListener("input", () => updateCharCount(i));
-}
+// Initialize the first level and hide the next level button
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('next-level-button').style.display = 'none';
+});
