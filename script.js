@@ -4,54 +4,47 @@ let score = 0;
 function runCode(level) {
     const codeEditor = document.getElementById(`code-editor-${level}`);
     const outputElement = document.getElementById(`output-${level}`);
-    const nextLevelButton = document.getElementById("next-level-button");
-
-    const userCode = codeEditor.value;
+    const code = codeEditor.value;
 
     try {
-        const result = eval(userCode);
+        const result = eval(code);
         outputElement.textContent = result !== undefined ? result : 'No output';
         
-        if (result !== undefined && result !== null && result !== '') {
-            score++;
-            document.getElementById("score").textContent = score;
-            nextLevelButton.style.display = 'block';
+        if (result !== undefined) {
+            score += 1;
+            document.getElementById('score').textContent = score;
+            document.getElementById('next-level-button').style.display = 'block';
         } else {
-            nextLevelButton.style.display = 'none';
+            outputElement.textContent = 'No output or error in code';
         }
-    } catch (error) {
-        outputElement.textContent = error;
-        nextLevelButton.style.display = 'none';
-    }
-}
-
-function nextLevel() {
-    if (currentLevel < 9) {
-        document.getElementById(`level-${currentLevel}`).classList.remove('active');
-        currentLevel++;
-        document.getElementById(`level-${currentLevel}`).classList.add('active');
-        document.getElementById("next-level-button").style.display = 'none';
+    } catch (e) {
+        outputElement.textContent = `Error: ${e.message}`;
     }
 }
 
 function previousLevel() {
     if (currentLevel > 1) {
         document.getElementById(`level-${currentLevel}`).classList.remove('active');
-        currentLevel--;
+        currentLevel -= 1;
         document.getElementById(`level-${currentLevel}`).classList.add('active');
-        document.getElementById("next-level-button").style.display = 'none';
+    }
+}
+
+function nextLevel() {
+    if (currentLevel < 10) {
+        document.getElementById(`level-${currentLevel}`).classList.remove('active');
+        currentLevel += 1;
+        document.getElementById(`level-${currentLevel}`).classList.add('active');
+        document.getElementById('next-level-button').style.display = 'none';
     }
 }
 
 function showHint(level) {
-    const hint = document.getElementById(`hint-${level}`);
-    hint.style.display = hint.style.display === 'none' ? 'block' : 'none';
+    document.getElementById(`hint-${level}`).style.display = 'block';
 }
 
-document.addEventListener('input', function (event) {
-    if (event.target.tagName.toLowerCase() === 'textarea') {
-        const charCount = event.target.value.length;
-        const editorInfo = event.target.nextElementSibling.querySelector('span');
-        editorInfo.textContent = `${charCount} characters`;
-    }
+document.querySelectorAll('textarea').forEach((textarea, index) => {
+    textarea.addEventListener('input', function() {
+        document.getElementById(`char-count-${index + 1}`).textContent = `${this.value.length} characters`;
+    });
 });
