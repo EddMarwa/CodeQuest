@@ -10,7 +10,8 @@
     <div id="game-container">
         <h1>Code Quest</h1>
         <div id="level-container">
-            <div id="level-1" class="level">
+            <!-- Level 1 -->
+            <div id="level-1" class="level active">
                 <h2>Level 1</h2>
                 <p id="challenge-1">Declare variables for wood, stone, and iron and initialize them with values.</p>
                 <textarea id="code-editor-1" rows="10" cols="50" placeholder="Write your JavaScript code here..."></textarea>
@@ -23,6 +24,8 @@
                 <button id="hint-button-1" class="hint-button" onclick="showHint(1)">Show Hint</button>
                 <p id="hint-1" style="display: none;">Hint: Declare variables using `let` or `const` and assign values.</p>
             </div>
+
+            <!-- Level 2 -->
             <div id="level-2" class="level">
                 <h2>Level 2</h2>
                 <p id="challenge-2">Create an array with three elements and log it to the console.</p>
@@ -36,6 +39,8 @@
                 <button id="hint-button-2" class="hint-button" onclick="showHint(2)">Show Hint</button>
                 <p id="hint-2" style="display: none;">Hint: Use array methods like `push` and `pop` to manipulate arrays.</p>
             </div>
+
+            <!-- Level 3 -->
             <div id="level-3" class="level">
                 <h2>Level 3</h2>
                 <p id="challenge-3">Create a function that adds two numbers and returns the result.</p>
@@ -49,6 +54,8 @@
                 <button id="hint-button-3" class="hint-button" onclick="showHint(3)">Show Hint</button>
                 <p id="hint-3" style="display: none;">Hint: Define a function using `function` keyword or arrow function syntax.</p>
             </div>
+
+            <!-- Level 4 -->
             <div id="level-4" class="level">
                 <h2>Level 4</h2>
                 <p id="challenge-4">Create an object representing a person with properties for name, age, and occupation.</p>
@@ -62,6 +69,8 @@
                 <button id="hint-button-4" class="hint-button" onclick="showHint(4)">Show Hint</button>
                 <p id="hint-4" style="display: none;">Hint: Use object literal syntax to define the person object.</p>
             </div>
+
+            <!-- Level 5 -->
             <div id="level-5" class="level">
                 <h2>Level 5</h2>
                 <p id="challenge-5">Create a loop that prints numbers from 1 to 10.</p>
@@ -75,6 +84,8 @@
                 <button id="hint-button-5" class="hint-button" onclick="showHint(5)">Show Hint</button>
                 <p id="hint-5" style="display: none;">Hint: Use a `for` loop or a `while` loop.</p>
             </div>
+
+            <!-- Level 6 -->
             <div id="level-6" class="level">
                 <h2>Level 6</h2>
                 <p id="challenge-6">Write a function that returns the largest number in an array.</p>
@@ -88,6 +99,8 @@
                 <button id="hint-button-6" class="hint-button" onclick="showHint(6)">Show Hint</button>
                 <p id="hint-6" style="display: none;">Hint: Use a loop or the `Math.max` method.</p>
             </div>
+
+            <!-- Level 7 -->
             <div id="level-7" class="level">
                 <h2>Level 7</h2>
                 <p id="challenge-7">Write a function that reverses a string.</p>
@@ -101,6 +114,8 @@
                 <button id="hint-button-7" class="hint-button" onclick="showHint(7)">Show Hint</button>
                 <p id="hint-7" style="display: none;">Hint: Use the `split`, `reverse`, and `join` methods.</p>
             </div>
+
+            <!-- Level 8 -->
             <div id="level-8" class="level">
                 <h2>Level 8</h2>
                 <p id="challenge-8">Write a function that checks if a number is prime.</p>
@@ -114,6 +129,8 @@
                 <button id="hint-button-8" class="hint-button" onclick="showHint(8)">Show Hint</button>
                 <p id="hint-8" style="display: none;">Hint: A prime number is only divisible by 1 and itself.</p>
             </div>
+
+            <!-- Level 9 -->
             <div id="level-9" class="level">
                 <h2>Level 9</h2>
                 <p id="challenge-9">Write a function that sorts an array of numbers in ascending order.</p>
@@ -132,7 +149,7 @@
         <div id="score-container">Score: <span id="score">0</span></div>
     </div>
     <footer>
-        <p>Quest by <a href="https://www.invodtech.com" target="_blank">InvodTech Ltd</a></p>
+        <p>Quest by <a href="https://github.com/EddMarwa" target="_blank">EddMarwa</a></p>
     </footer>
     <script src="script.js"></script>
 </body>
