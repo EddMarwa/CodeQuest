@@ -1,32 +1,18 @@
 body {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    background-color: #f9f9f9;
-    text-align: center;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    justify-content: center;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
 }
 
 #game-container {
-    border: 3px solid #4CAF50;
-    border-radius: 15px;
-    padding: 20px;
-    background-color: #ffffff;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-    max-width: 800px;   
+    width: 80%;
     margin: auto;
+    text-align: center;
 }
 
 h1 {
-    color: #4CAF50;
-    margin-bottom: 20px;
-}
-
-h2 {
-    color: #4CAF50;
-    margin-bottom: 10px;
+    margin-top: 20px;
 }
 
 .level {
@@ -39,79 +25,78 @@ h2 {
 
 textarea {
     width: 100%;
-    border: 2px solid #4CAF50;
-    border-radius: 10px;
     padding: 10px;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 16px;
-    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.05);
-    margin-bottom: 20px;
+    margin: 10px 0;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-#editor-info {
-    text-align: right;
-    font-size: 12px;
-    color: #666;
-    margin-top: 5px;
-}
-
-button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 10px;
+.run-button,
+.prev-button,
+.hint-button,
+.next-level-button {
     padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
     margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
 }
 
-button:hover {
-    background-color: #45a049;
-    transform: scale(1.05);
-}
-
-pre {
-    background-color: #f1f1f1;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    padding: 10px;
-    margin-top: 15px;
-    text-align: left;
-    white-space: pre-wrap;
-}
-
-#hint-button {
-    background-color: #FFD700;
+.run-button {
+    background-color: #28a745;
     color: white;
 }
 
-#hint-button:hover {
-    background-color: #FFC700;
+.prev-button {
+    background-color: #ffc107;
+    color: white;
+}
+
+.hint-button {
+    background-color: #007bff;
+    color: white;
+}
+
+.next-level-button {
+    background-color: #6c757d;
+    color: white;
+}
+
+.run-button:hover,
+.prev-button:hover,
+.hint-button:hover,
+.next-level-button:hover {
+    opacity: 0.9;
 }
 
 footer {
-    margin-top: 20px;
-    padding: 10px 0;
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
 }
 
-footer a {
-    color: #000000; 
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content a {
+    color: #fff;
     text-decoration: none;
-    font-weight: bold;
+    margin: 0 10px;
 }
 
-footer a:hover {
+.footer-content a:hover {
     text-decoration: underline;
 }
 
-#score-container {
-    margin-top: 20px;
-    font-size: 18px;
-    color: #4CAF50;
-}
-
-#next-level-button {
-    display: none;
+.social-links {
+    margin-top: 10px;
 }
