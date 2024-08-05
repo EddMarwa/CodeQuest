@@ -130,44 +130,31 @@
                 <div id="editor-info-9">
                     <span id="char-count-9">0 characters</span>
                 </div>
-                <button id="run-button-9" onclick="runCode(9)">Run Code</button>
-                <button id="prev-button-9" onclick="prevLevel()">Previous Challenge</button>
-                <pre id="output-9"></pre>
-                <button id="hint-button-9" onclick="showHint(9)">Show Hint</button>
-                <p id="hint-9" style="display: none;">Hint: Use `concat()` and `filter()` to remove duplicates.</p>
-            </div>
-            <!-- Level 10 -->
-            <div id="level-10" class="level">
-                <h2>Level 10</h2>
-                <p id="challenge-10">Create a function to calculate the average of an array of numbers.</p>
-                <textarea id="code-editor-10" rows="10" cols="50" placeholder="Write your JavaScript code here..."></textarea>
-                <div id="editor-info-10">
-                    <span id="char-count-10">0 characters</span>
-                </div>
-                <button id="run-button-10" onclick="runCode(10)">Run Code</button>
-                <button id="prev-button-10" onclick="prevLevel()">Previous Challenge</button>
-                <pre id="output-10"></pre>
-                <button id="hint-button-10" onclick="showHint(10)">Show Hint</button>
-                <p id="hint-10" style="display: none;">Hint: Use `reduce()` method to calculate the sum and then divide by the length of the array.</p>
+            <button id="run-button-9" onclick="runCode(9)">Run Code</button>
+            <button id="prev-button-9" onclick="prevLevel()">Previous Challenge</button>
+            <pre id="output-9"></pre>
+            <button id="hint-button-9" onclick="showHint(9)">Show Hint</button>
+            <p id="hint-9" style="display: none;">Hint: Use `concat()` and `filter()` methods to merge arrays and remove duplicates.</p>
             </div>
         </div>
-        <button id="next-level-button" onclick="nextLevel()">Next Level</button>
+        <button id="next-level-button" style="display: none;" onclick="nextLevel()">Next Level</button>
         <div id="score-container">
-            Score: <span id="score">0</span>
+            <p>Score: <span id="score">0</span></p>
         </div>
+        <footer>
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="https://www.linkedin.com/in/edd-marwa" target="">LinkedIn</a>
+                    <a href="https://twitter.com/EddMarwa" target="">Twitter</a>
+                    <a href="https://github.com/EddMarwa" target="">GitHub</a>
+                </div>
+                <div class="footer-info">
+                    <p>&copy; 2024 Code Quest. All rights reserved.</p>
+                    <p>Contact us at <a href="mailto:support@codequest.com">support@codequest.com</a></p>
+                </div>
+            </div>
+        </footer>
     </div>
-    <footer>
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Contact</a>
-            </div>
-            <div class="footer-info">
-                <p>Created by Edward</p>
-            </div>
-        </div>
-    </footer>
     <script src="script.js"></script>
 </body>
 </html>
