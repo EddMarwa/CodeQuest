@@ -56,7 +56,7 @@ function nextLevel() {
     const currentLevel = getCurrentLevel();
     const nextLevel = currentLevel + 1;
     
-    if (nextLevel <= 9) {
+    if (nextLevel <= 10) {
         document.getElementById(`level-${currentLevel}`).classList.remove('active');
         document.getElementById(`level-${nextLevel}`).classList.add('active');
         document.getElementById('next-level-button').style.display = 'none';
@@ -89,7 +89,7 @@ function showHint(level) {
 
 // Function to get the current active level number
 function getCurrentLevel() {
-    for (let i = 1; i <= 9; i++) {
+    for (let i = 1; i <= 10; i++) {
         if (document.getElementById(`level-${i}`).classList.contains('active')) {
             return i;
         }
