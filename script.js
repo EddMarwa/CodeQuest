@@ -64,8 +64,13 @@ function nextLevel() {
         document.getElementById(`hint-${currentLevel}`).style.display = 'none';
         // Clear editor
         document.getElementById(`code-editor-${currentLevel}`).value = '';
+
+        // Update progress bar
+        updateProgressBar(nextLevel);
     }
 }
+
+
 
 // Function to go back to the previous level
 function prevLevel() {
@@ -78,6 +83,9 @@ function prevLevel() {
         document.getElementById('next-level-button').style.display = 'none';
         // Hide hint for the current level
         document.getElementById(`hint-${currentLevel}`).style.display = 'none';
+
+        // Update progress bar
+        updateProgressBar(prevLevel);
     }
 }
 
