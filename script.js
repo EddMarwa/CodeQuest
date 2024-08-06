@@ -51,6 +51,16 @@ function updateScore() {
     scoreElement.textContent = score;
 }
 
+// Function to update the progress bar
+function updateProgressBar(level) {
+    const progressBar = document.getElementById('progress-bar');
+    const progressText = document.getElementById('progress-text');
+    
+    const percentage = (level / 10) * 100;
+    progressBar.value = percentage;
+    progressText.textContent = `Level ${level}/10`;
+}
+
 // Function to move to the next level
 function nextLevel() {
     const currentLevel = getCurrentLevel();
