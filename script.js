@@ -142,13 +142,14 @@ function loadModePreference() {
     const mode = localStorage.getItem('mode');
     if (mode === 'dark') {
         document.body.classList.add('dark-mode');
+        document.getElementById('mode-toggle').checked = true;
     }
 }
 
 // Initialize mode on page load
 document.addEventListener('DOMContentLoaded', () => {
     loadModePreference();
-    document.getElementById('mode-toggle-button').addEventListener('click', () => {
+    document.getElementById('mode-toggle').addEventListener('change', () => {
         toggleMode();
         saveModePreference();
     });
