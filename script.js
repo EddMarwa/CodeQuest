@@ -28,11 +28,11 @@ function runCode(level) {
 
         // Check if output is valid to proceed to the next level
         if (consoleOutput.length > 0) {
-            document.getElementById('next-level-button').style.display = 'block';
+            document.getElementById(`next-level-button-${level}`).style.display = 'block';
             // Update score if valid output
             updateScore();
         } else {
-            document.getElementById('next-level-button').style.display = 'none';
+            document.getElementById(`next-level-button-${level}`).style.display = 'none';
         }
 
     } catch (e) {
@@ -69,7 +69,7 @@ function nextLevel() {
     if (nextLevel <= 10) {
         document.getElementById(`level-${currentLevel}`).classList.remove('active');
         document.getElementById(`level-${nextLevel}`).classList.add('active');
-        document.getElementById('next-level-button').style.display = 'none';
+        document.getElementById(`next-level-button-${currentLevel}`).style.display = 'none';
         // Hide hint for the current level
         document.getElementById(`hint-${currentLevel}`).style.display = 'none';
         // Clear editor
@@ -80,8 +80,6 @@ function nextLevel() {
     }
 }
 
-
-
 // Function to go back to the previous level
 function prevLevel() {
     const currentLevel = getCurrentLevel();
@@ -90,11 +88,11 @@ function prevLevel() {
     if (prevLevel >= 1) {
         document.getElementById(`level-${currentLevel}`).classList.remove('active');
         document.getElementById(`level-${prevLevel}`).classList.add('active');
-        document.getElementById('next-level-button').style.display = 'none';
+        document.getElementById(`next-level-button-${currentLevel}`).style.display = 'none';
         // Hide hint for the current level
         document.getElementById(`hint-${currentLevel}`).style.display = 'none';
 
-        // progress bar
+        // Update progress bar
         updateProgressBar(prevLevel);
     }
 }
@@ -117,5 +115,8 @@ function getCurrentLevel() {
 
 // Initialize the first level and hide the next level button
 document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('next-level-button').style.display = 'none';
+    for (let i = 1; i <= 10; i++) {
+        document.getElementById(`next-level-button-${i}`).style.display = 'none';
+    }
+    updateProgressBar(1);
 });
