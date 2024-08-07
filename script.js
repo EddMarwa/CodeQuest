@@ -94,7 +94,7 @@ function prevLevel() {
         // Hide hint for the current level
         document.getElementById(`hint-${currentLevel}`).style.display = 'none';
 
-        // Update progress bar
+        // progress bar
         updateProgressBar(prevLevel);
     }
 }
