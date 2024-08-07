@@ -1,167 +1,3 @@
-/* Light Mode (default) */
-body {
-    background-color: white;
-    color: black;
-}
-
-.level {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin-bottom: 10px;
-}
-
-textarea {
-    background-color: white;
-    color: black;
-}
-
-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-/* Dark Mode */
-body.dark-mode {
-    background-color: #181818;
-    color: white;
-}
-
-body.dark-mode .level {
-    background-color: #282828;
-    border: 1px solid #444;
-}
-
-body.dark-mode textarea {
-    background-color: #333;
-    color: white;
-}
-
-body.dark-mode button {
-    background-color: #444;
-    color: white;
-}
-
-body.dark-mode button:hover {
-    background-color: #666;
-}
-
-/* Toggle Switch */
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-  }
-  
-  .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    transition: .4s;
-  }
-  
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    transition: .4s;
-  }
-  
-  input:checked + .slider {
-    background-color: green;
-  }
-  
-  input:checked + .slider:before {
-    transform: translateX(26px);
-  }
-  
-  /* Rounded slider */
-  .slider.round {
-    border-radius: 34px;
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
-  }
-  
-  /* Light Mode (default) */
-  body {
-    background-color: white;
-    color: black;
-  }
-  
-  .level {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin-bottom: 10px;
-  }
-  
-  textarea {
-    background-color: white;
-    color: black;
-  }
-  
-  button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Dark Mode */
-  body.dark-mode {
-    background-color: #181818;
-    color: white;
-  }
-  
-  body.dark-mode .level {
-    background-color: #282828;
-    border: 1px solid #444;
-  }
-  
-  body.dark-mode textarea {
-    background-color: #333;
-    color: white;
-  }
-  
-  body.dark-mode button {
-    background-color: #444;
-    color: white;
-  }
-  
-  body.dark-mode button:hover {
-    background-color: #666;
-  }
-
-
 /* General Styles */
 body {
     font-family: 'Comic Sans MS', cursive, sans-serif;
@@ -183,6 +19,7 @@ body {
     max-width: 900px;
     margin: auto;
 }
+
 h1 {
     color: #4CAF50;
     margin-bottom: 20px;
@@ -329,7 +166,7 @@ footer {
     transform: scale(1.05);
 }
 
-/*progress bar */
+/* Progress Bar */
 #progress-container {
     margin-top: 20px;
     text-align: center;
@@ -359,4 +196,51 @@ progress::-webkit-progress-value {
     margin-top: 5px;
     font-size: 16px;
     color: #4CAF50;
+}
+
+/* Toggle Switch */
+.switch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.switch label {
+    font-size: 16px;
+    color: #4CAF50;
+    margin: 0 10px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    width: 60px;
+    height: 34px;
+    background-color: #ccc;
+    border-radius: 34px;
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+.slider:before {
+    content: '';
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: white;
+    top: 4px;
+    left: 4px;
+    transition: transform 0.3s;
+}
+
+input:checked + .slider {
+    background-color: #4CAF50;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
 }
