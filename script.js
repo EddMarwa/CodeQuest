@@ -123,25 +123,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 ///--------------------------dark mode and light mode------------------------//
-// JavaScript to handle the toggle functionality
-document.addEventListener('DOMContentLoaded', () => {
-    const toggleSwitch = document.getElementById('mode-toggle');
-    const currentMode = localStorage.getItem('theme') || 'light';
+function toggleMode() {
+    const body = document.body;
+    const currentMode = body.classList.contains('dark-mode');
 
-    // Apply the current mode
-    if (currentMode === 'dark') {
-        document.body.classList.add('dark-mode');
-        toggleSwitch.checked = true;
+    if (currentMode) {
+        body.classList.remove('dark-mode');
+        localStorage.setItem('theme', 'light'); // Save the preference to localStorage
+    } else {
+        body.classList.add('dark-mode');
+        localStorage.setItem('theme', 'dark'); // Save the preference to localStorage
     }
+}
 
-    // Event listener for toggle switch
-    toggleSwitch.addEventListener('change', () => {
-        if (toggleSwitch.checked) {
-            document.body.classList.add('dark-mode');
-            localStorage.setItem('theme', 'dark');
-        } else {
-            document.body.classList.remove('dark-mode');
-            localStorage.setItem('theme', 'light');
-        }
-    });
+// Function to initialize the mode based on localStorage
+function initializeMode() {
+    const savedTheme = localStorage.getItem('theme');
+
+    if (savedTheme === 'dark') {
+        document.body.classList.add('dark-mode');
+        document.querySelector('input[type="checkbox"]').checked = true;
+    } else {
+        document.body.classList.remove('dark-mode');
+        document.querySelector('input[type="checkbox"]').checked = false;
+    }
+}
+
+// Add event listener to the toggle switch
+document.addEventListener('DOMContentLoaded', () => {
+    initializeMode(); // Initialize mode based on saved preference
+
+    const toggleSwitch = document.querySelector('.switch input[type="checkbox"]');
+    toggleSwitch.addEventListener('change', toggleMode);
 });
