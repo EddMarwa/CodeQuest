@@ -120,3 +120,37 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     updateProgressBar(1);
 });
+
+
+///--------------------------dark mode and light mode------------------------//
+// Function to toggle dark and light modes
+function toggleMode() {
+    document.body.classList.toggle('dark-mode');
+}
+
+// Save the mode in localStorage to persist between sessions
+function saveModePreference() {
+    if (document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('mode', 'dark');
+    } else {
+        localStorage.setItem('mode', 'light');
+    }
+}
+
+// Load the mode preference from localStorage
+function loadModePreference() {
+    const mode = localStorage.getItem('mode');
+    if (mode === 'dark') {
+        document.body.classList.add('dark-mode');
+    }
+}
+
+// Initialize mode on page load
+document.addEventListener('DOMContentLoaded', () => {
+    loadModePreference();
+    document.getElementById('mode-toggle-button').addEventListener('click', () => {
+        toggleMode();
+        saveModePreference();
+    });
+});
+
