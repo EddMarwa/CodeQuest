@@ -103,7 +103,7 @@ function showHint(level) {
     hint.style.display = hint.style.display === 'none' ? 'block' : 'none';
 }
 
-// Function to get the current active level number
+// Function to get the current level number
 function getCurrentLevel() {
     for (let i = 1; i <= 10; i++) {
         if (document.getElementById(`level-${i}`).classList.contains('active')) {
