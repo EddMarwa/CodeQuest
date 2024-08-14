@@ -75,7 +75,7 @@ function nextLevel() {
         // Clear editor
         document.getElementById(`code-editor-${currentLevel}`).value = '';
 
-        // Update progress bar
+       
         updateProgressBar(nextLevel);
     }
 }
