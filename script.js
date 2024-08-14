@@ -89,7 +89,7 @@ function prevLevel() {
         document.getElementById(`level-${currentLevel}`).classList.remove('active');
         document.getElementById(`level-${prevLevel}`).classList.add('active');
         document.getElementById(`next-level-button-${currentLevel}`).style.display = 'none';
-        // Hide hint for the current level
+       
         document.getElementById(`hint-${currentLevel}`).style.display = 'none';
 
         //  progress bar Update
