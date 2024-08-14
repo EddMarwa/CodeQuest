@@ -129,7 +129,7 @@ function toggleMode() {
 
     if (currentMode) {
         body.classList.remove('dark-mode');
-        localStorage.setItem('theme', 'light'); // Save the preference to localStorage
+        localStorage.setItem('theme', 'light'); 
     } else {
         body.classList.add('dark-mode');
         localStorage.setItem('theme', 'dark'); // Save the preference to localStorage
