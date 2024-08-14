@@ -151,7 +151,7 @@ function initializeMode() {
 
 // Add event listener to the toggle switch
 document.addEventListener('DOMContentLoaded', () => {
-    initializeMode(); // Initialize mode based on saved preference
+    initializeMode(); 
 
     const toggleSwitch = document.querySelector('.switch input[type="checkbox"]');
     toggleSwitch.addEventListener('change', toggleMode);
