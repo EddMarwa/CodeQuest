@@ -29,7 +29,7 @@ function runCode(level) {
         // Check if output is valid to proceed to the next level
         if (consoleOutput.length > 0) {
             document.getElementById(`next-level-button-${level}`).style.display = 'block';
-            // Update score if valid output
+            
             updateScore();
         } else {
             document.getElementById(`next-level-button-${level}`).style.display = 'none';
