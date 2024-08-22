@@ -4,7 +4,7 @@ function runCode(level) {
     const output = document.getElementById(`output-${level}`);
     const code = codeEditor.value;
 
-    // Clear previous output
+    // Clears output
     output.textContent = '';
 
     // Capture console output
