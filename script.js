@@ -17,7 +17,7 @@ function runCode(level) {
     try {
         // Create a new function to execute the user code safely
         const userFunction = new Function(code);
-        userFunction(); // Execute user code
+        userFunction(); 
 
         // Retrieve captured output
         if (consoleOutput.length > 0) {
