@@ -38,7 +38,7 @@ function runCode(level) {
     } catch (e) {
         output.textContent = `Error: ${e.message}`;
     } finally {
-        // Restore original console.log
+       
         console.log = originalConsoleLog;
     }
 }
