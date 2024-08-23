@@ -112,7 +112,7 @@ function getCurrentLevel() {
     return 1;
 }
 
-// Initializes the first level and hides the next level button
+// Initializes the first level and hides the next level 
 document.addEventListener('DOMContentLoaded', () => {
     for (let i = 1; i <= 10; i++) {
         document.getElementById(`next-level-button-${i}`).style.display = 'none';
