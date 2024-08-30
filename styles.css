@@ -198,7 +198,7 @@ progress::-webkit-progress-value {
     color: #4CAF50;
 }
 
-/* Toggle Switch */
+/* The Toggle Switch */
 .switch {
     display: flex;
     align-items: center;
