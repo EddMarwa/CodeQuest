@@ -71,7 +71,7 @@ function nextLevel() {
         document.getElementById(`next-level-button-${currentLevel}`).style.display = 'none';
         // Hide hint for the current level
         document.getElementById(`hint-${currentLevel}`).style.display = 'none';
-        // Clear editor
+        // Clears editor
         document.getElementById(`code-editor-${currentLevel}`).value = '';
         updateProgressBar(nextLevel);
     }
