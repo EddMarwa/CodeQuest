@@ -93,7 +93,7 @@ function prevLevel() {
     }
 }
 
-// Function to show "hint" 
+// Function to "show" "hint" 
 function showHint(level) {
     const hint = document.getElementById(`hint-${level}`);
     hint.style.display = hint.style.display === 'none' ? 'block' : 'none';
