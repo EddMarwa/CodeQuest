@@ -73,8 +73,6 @@ function nextLevel() {
         document.getElementById(`hint-${currentLevel}`).style.display = 'none';
         // Clear editor
         document.getElementById(`code-editor-${currentLevel}`).value = '';
-
-       
         updateProgressBar(nextLevel);
     }
 }
