@@ -76,7 +76,6 @@ function nextLevel() {
         updateProgressBar(nextLevel);
     }
 }
-
 // Function to go back to the previous level
 function prevLevel() {
     const currentLevel = getCurrentLevel();
